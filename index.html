@@ -1,107 +1,389 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aprenda+</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
-
-  <header class="header">
-    <div class="container header__inner">
-      <a href="index.html" class="logo">Nome do Projeto</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="nav" id="nav">
-        <a href="listagem.html">Itens</a>
-        <a href="cadastro.html">Cadastrar</a>
-        <a href="listagem.html" class="nav__cta">Começar</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprenda+</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- BARRA DE NAVEGAÇÃO -->
+    <header class="navbar">
+      <a href="#inicio">
+      <img src="assets/img/logo.png" alt="Aprenda+" /> 
+    </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="#sobre">Sobre nós</a></li>
+        </ul>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero__inner">
-        <div class="hero__text">
-          <p class="hero__kicker">Projeto do curso</p>
-          <h1 class="hero__title">Organize tudo<br>em um lugar só.</h1>
-          <p class="hero__desc">Descreva aqui, em uma ou duas frases, qual problema o seu projeto resolve e para quem ele é. Fale a língua de quem vai usar.</p>
-          <div class="hero__actions">
-            <a href="listagem.html" class="btn btn--primary">Ver itens</a>
-            <a href="cadastro.html" class="btn btn--ghost">Cadastrar novo</a>
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero-wrapper" id="inicio">
+        <div class="hero-card">
+          <span class="glow-left" />
+          <span class="glow-right" />
+          <div class="hero-content">
+            <div class="pill-group">
+              <div class="tag-pill">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M1.33337 13.3332V7.99984C1.33337 7.64622 1.47385 7.30708 1.7239 7.05703C1.97395 6.80698 2.31309 6.6665 2.66671 6.6665H13.3334C13.687 6.6665 14.0261 6.80698 14.2762 7.05703C14.5262 7.30708 14.6667 7.64622 14.6667 7.99984V13.3332"
+                    stroke="#2D5B46"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M2.66663 6.6665V3.99984C2.66663 3.64622 2.8071 3.30708 3.05715 3.05703C3.3072 2.80698 3.64634 2.6665 3.99996 2.6665H12C12.3536 2.6665 12.6927 2.80698 12.9428 3.05703C13.1928 3.30708 13.3333 3.64622 13.3333 3.99984V6.6665"
+                    stroke="#2D5B46"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8 2.6665V6.6665"
+                    stroke="#2D5B46"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M1.33337 12H14.6667"
+                    stroke="#2D5B46"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>Qualidade do sono</span>
+              </div>
+              <div class="tag-pill">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M2 1.3335V6.00016C2 6.7335 2.6 7.3335 3.33333 7.3335H6C6.35362 7.3335 6.69276 7.19302 6.94281 6.94297C7.19286 6.69292 7.33333 6.35378 7.33333 6.00016V1.3335"
+                    stroke="#2D5B46"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M4.66663 1.3335V14.6668"
+                    stroke="#2D5B46"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M14 10.0002V1.3335C13.1159 1.3335 12.2681 1.68469 11.6429 2.30981C11.0178 2.93493 10.6666 3.78277 10.6666 4.66683V8.66683C10.6666 9.40016 11.2666 10.0002 12 10.0002H14ZM14 10.0002V14.6668"
+                    stroke="#2D5B46"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>Alimentação Consciente</span>
+              </div>
+              <div class="tag-pill">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="24"
+                  viewBox="0 0 16 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M10 13L12.472 20.416"
+                    stroke="#2D5B46"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M2 19C3.73096 20.9473 5.8363 22 8 22C10.1637 22 12.269 20.9473 14 19"
+                    stroke="#2D5B46"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M2 2L4.14 11.633C4.22862 12.0314 4.39859 12.3778 4.62582 12.6232C4.85306 12.8685 5.12602 13.0004 5.406 13H12"
+                    stroke="#2D5B46"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5.99995 13L3.52795 20.416"
+                    stroke="#2D5B46"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>Alívio &amp; Relaxamento</span>
+              </div>
+            </div>
+
+            <h1 class="hero-title">
+              Cuide da mente sem atrapalhar sua rotina.
+            </h1>
+            <p class="hero-subtitle">Micro-hábitos para sair da inércia.</p>
+
+            <a href="#desafios" class="btn-hero">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M14 9.536V7C14 5.93913 14.4214 4.92172 15.1716 4.17157C15.9217 3.42143 16.9391 3 18 3H19.5C19.6326 3 19.7598 3.05268 19.8536 3.14645C19.9473 3.24021 20 3.36739 20 3.5V5C20 6.06087 19.5786 7.07828 18.8284 7.82843C18.0783 8.57857 17.0609 9 16 9C14.9391 9 13.9217 9.42143 13.1716 10.1716C12.4214 10.9217 12 11.9391 12 13C12 15 13 16 13 18C13 19.0819 12.6491 20.1345 12 21"
+                  stroke="#2D5B46"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M6.55097 8.02021C5.62616 8.1036 4.74285 8.44287 4 9C4 9.92856 4.25857 10.8388 4.74675 11.6287C5.23492 12.4185 5.9334 13.0569 6.76393 13.4721C7.59446 13.8874 8.52422 14.0632 9.44903 13.9798C10.3738 13.8964 11.2572 13.5571 12 13C12 12.0714 11.7414 11.1612 11.2533 10.3713C10.7651 9.58147 10.0666 8.94313 9.23607 8.52787C8.40554 8.1126 7.47578 7.93682 6.55097 8.02021Z"
+                  stroke="#2D5B46"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5 21H19"
+                  stroke="#2D5B46"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Comece agora
+            </a>
+          </div>
+
+          <div class="hero-illustration">
+            <img fetchpriority="high" src="assets/img/hero_img.png" alt="pessoa cansada" />
           </div>
         </div>
-        <div class="vitrine" aria-hidden="true">
-          <span class="vitrine__etiqueta">Em destaque</span>
-          <div class="vitrine__foto"></div>
-          <p class="vitrine__titulo">Nome do item</p>
-          <p class="vitrine__linha"></p>
-          <p class="vitrine__linha vitrine__linha--curta"></p>
-          <span class="vitrine__link">Ver detalhes</span>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="fluxo">
-      <div class="container">
-        <h2 class="fluxo__title">Como funciona</h2>
-        <div class="prateleira">
-          <div class="prateleira__item prateleira__item--1">
-            <span class="prateleira__numero">1</span>
-            <h3>Cadastre</h3>
-            <p>Preencha um formulário simples para adicionar um novo item.</p>
+      <!-- SEÇÃO: O QUE VOCÊ VAI APRENDER E FAZER -->
+      <section class="section-learn">
+        <div>
+          <h2 class="section-title-center">O que você vai aprender e fazer?</h2>
+
+          <div class="learn-container">
+            <!-- Grid de 6 cartões -->
+            <div class="learn-grid">
+              <!-- Card 1 -->
+              <div class="learn-card learn-card-top-left">
+                <span class="category-badge">Alimentação</span>
+                <h4>Atenção plena às refeições</h4>
+              </div>
+              <!-- Card 2 -->
+              <div class="learn-card learn-card-top-center">
+                <span class="category-badge">Higiene do sono</span>
+                <h4>Ritual noturno desacelerado</h4>
+              </div>
+              <!-- Card 3 -->
+              <div class="learn-card learn-card-top-right">
+                <span class="category-badge">Saúde Mental</span>
+                <h4>Autocuidado livre de culpa</h4>
+              </div>
+              <!-- Card 4 -->
+              <div class="learn-card learn-card-bottom-left">
+                <span class="category-badge">Higiene do sono</span>
+                <h4>Consistência ao acordar</h4>
+              </div>
+              <!-- Card 5 -->
+              <div class="learn-card learn-card-bottom-center">
+                <span class="category-badge">Saúde Mental</span>
+                <h4>Regulação rápida da ansiedade</h4>
+              </div>
+              <!-- Card 6 -->
+              <div class="learn-card learn-card-bottom-right">
+                <span class="category-badge">Alimentação</span>
+                <h4>Hidratação sem esforço</h4>
+              </div>
+            </div>
+            <span class="divisor"></span>
+            <!-- Painel lateral da citação -->
+            <div class="learn-quote-panel">
+              <p class="quote-text">
+                “Soltar o peso do agora abre espaço para o que chega amanhã.”
+              </p>
+              <div class="plants-graphic">
+                <img loading="lazy" src="assets/img/folhas_landingpage.png" alt="" />
+              </div>
+            </div>
           </div>
-          <div class="prateleira__item prateleira__item--2">
-            <span class="prateleira__numero">2</span>
-            <h3>Liste e filtre</h3>
-            <p>Veja todos os itens cadastrados e filtre pelo que importa.</p>
+        </div>
+      </section>
+
+      <!-- SEÇÃO: OS DESAFIOS DA TRILHA -->
+      <section class="section-challenges" id="desafios">
+        <div class="section-header-left">
+          <h2>Os desafios da trilha</h3>
+          <p>Cada desafio vai te ajudar a criar hábitos melhores para dormir</p>
+        </div>
+        <div class="container">
+          <div class="cards-row">
+            <!-- Card 1 -->
+            <div class="challenge-card">
+              <div class="card-topbar">
+                <span class="category-badge">Higiene do sono</span>
+                <a href="#" aria-label="Ver mais sobre a trilha de higiene do sono" class="link-more">Ver mais</a>
+              </div>
+
+              <h2>1h depois beber água</h2>
+              <p class="challenge-desc">
+                Aprenda a criar um ritual matinal leve, consistente e sem
+                estresse.
+              </p>
+
+              <div class="checkin-box">
+                <span class="challenge-icon"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12.7127 14.9628C11.728 15.9475 10.3925 16.5006 8.99999 16.5006C7.60744 16.5006 6.27193 15.9475 5.28725 14.9628C4.30258 13.9782 3.74939 12.6428 3.74939 11.2504C3.74939 9.75032 4.49948 8.32526 5.99965 7.12521C7.49982 5.92515 8.62495 4.12508 8.99999 2.25C9.37503 4.12508 10.5002 5.92515 12.0003 7.12521C13.5005 8.32526 14.2506 9.75032 14.2506 11.2504C14.2506 12.6428 13.6974 13.9782 12.7127 14.9628Z"
+                      stroke="#2D5B46"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+                <span
+                  >Faça o Check-in <br /><small
+                    >Aprenda sobre hidratação</small
+                  ></span
+                >
+              </div>
+
+              <div class="card-status-bar">
+                <span class="status-completed">✓ 100% concluído</span>
+                <span>Desafio 01</span>
+              </div>
+
+              <div class="card-microcopy">
+                <strong>Desperte no seu ritmo.</strong><br />
+                Um gatilho simples de 2 min.
+              </div>
+
+              <div class="tags-footer">
+                <span class="small-tag">Ritual matinal</span>
+                <span class="small-tag">Consistência</span>
+                <span class="small-tag">Menos estresse</span>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="challenge-card">
+              <div class="card-topbar">
+                <span class="category-badge">Higiene do sono</span>
+              </div>
+
+              <h2>Acordar de primeira</h2>
+              <p class="challenge-desc">
+                Aprenda a criar um ritual matinal leve, consistente e sem
+                estresse.
+              </p>
+
+              <div class="card-status-bar" style="margin-top: 10px">
+                <span class="status-completed">✓ 100% concluído</span>
+                <span>Desafio 02</span>
+              </div>
+
+              <div class="card-microcopy">
+                Ajustes de 2 minutos na sua rotina matinal que exigem zero
+                motivação para começar. Feito para dias normais e para dias de
+                bateria fraca.
+              </div>
+
+              <div class="tags-footer">
+                <span class="small-tag">Ritual matinal</span>
+                <span class="small-tag">Consistência</span>
+                <span class="small-tag">Menos estresse</span>
+              </div>
+            </div>
           </div>
-          <div class="prateleira__item prateleira__item--3">
-            <span class="prateleira__numero">3</span>
-            <h3>Veja os detalhes</h3>
-            <p>Acesse, edite ou remova qualquer item quando precisar.</p>
+        </div>
+      </section>
+
+      <!-- SEÇÃO FINAL: CTA -->
+      <section class="cta-wrapper">
+        <div class="container">
+          <div class="cta-card">
+            <span class="glow-left" />
+            <span class="glow-right"/>
+            <div class="cta-content">
+              <h2>O seu primeiro passo<br />leva apenas 2 minutos.</h2>
+              <p>Sem metas impossíveis, sem cobrança e no seu próprio ritmo.</p>
+            </div>
+            <a href="#" class="btn-dark">
+              <span>Experimente</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                  stroke="#D9F9E1"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 16L16 12L12 8"
+                  stroke="#D9F9E1"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M8 12H16"
+                  stroke="#D9F9E1"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="sobre">
-      <div class="container sobre__inner">
-        <div class="sobre__bloco">
-          <span class="sobre__ribbon">Problema</span>
-          <h2>O problema</h2>
-          <p>Descreva aqui o problema real que motivou o projeto. Use dados, um exemplo concreto ou a experiência de alguém para deixar claro por que isso importa.</p>
-        </div>
-        <div class="sobre__bloco">
-          <span class="sobre__ribbon sobre__ribbon--alt">Solução</span>
-          <h2>A solução</h2>
-          <p>Explique, em linguagem simples, como o seu projeto resolve esse problema no dia a dia de quem vai usá-lo.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-final">
-      <div class="container cta-final__inner">
-        <h2>Pronto para começar?</h2>
-        <a href="cadastro.html" class="btn btn--primary">Cadastrar o primeiro item</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer__inner">
-      <p>Nome do Projeto — feito por Integrante 1, Integrante 2 e Integrante 3.</p>
-      <a href="#" target="_blank" rel="noopener">Repositório no GitHub</a>
-    </div>
-  </footer>
-</body>
+      </section>
+    </main>
+  </body>
 </html>
