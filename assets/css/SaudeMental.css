@@ -1,0 +1,301 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Medium.ttf') format('truetype');
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-VariableFont.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --verde-floresta: #2D5B46;
+  --verde-profundo-rodape: #224A3B;
+  --verde-medio: #58AE8E;
+  --verde-claro: #B3EDBB;
+  --fundo-meditacao: #f1f8f3;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: white;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  font-size: 12px;
+  color: var(--verde-floresta);
+  background: white;
+}
+.links {
+  display: flex;
+  gap: 20px;
+}
+.links a {
+  color: var(--verde-floresta);
+  text-decoration: none;
+}
+.links a:hover {
+  text-decoration: underline;
+}
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  height: 380px;
+  padding: 0 40px;
+  background: var(--BgGradial, linear-gradient(104deg, #D9F9E1 10.49%, #B3EDBB 60.09%));
+}
+.topo-texto {
+  max-width: 680px;
+  align-self: center;
+}
+.topo h1 {
+  font-size: 46px;
+  font-weight: 700;
+  color: var(--verde-floresta);
+  margin-bottom: 30px;
+}
+.topo h2 {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--verde-medio);
+  margin-bottom: 25px;
+}
+.topo p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--verde-medio);
+}
+.imagem-topo {
+  height: 420px;
+  width: auto;
+}
+.meditacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 50px 40px;
+  background: var(--fundo-meditacao);
+}
+.meditacao-texto {
+  max-width: 420px;
+}
+.meditacao h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--verde-floresta);
+  margin-bottom: 10px;
+}
+.meditacao p {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--verde-medio);
+}
+.botao-meditar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 30px;
+  padding: 18px 28px;
+  border: none;
+  border-radius: 20px;
+  background: var(--verde-floresta);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.botao-meditar:hover {
+  background: var(--verde-profundo-rodape);
+}
+.play {
+  font-size: 18px;
+}
+.imagens-meditacao {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+.imagem-meditacao {
+  width: auto;
+  height: 470px;
+}
+.imagem-meditando {
+  width: auto;
+  height: 470px;
+  transform: scale(1.12) translateY(-15px);
+  transform-origin: bottom;
+}
+.habitos {
+  background: var(--verde-floresta);
+  padding: 70px 40px 100px;
+  text-align: center;
+  color: white;
+}
+.habitos h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+.habitos-texto {
+  font-size: 16px;
+  margin-bottom: 70px;
+}
+.cartoes {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.cartao {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  min-height: 400px;
+  padding: 28px 24px 28px;
+  background: #fbf8f7;
+  border-radius: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+.cartao h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--verde-floresta);
+  margin-bottom: 15px;
+}
+.cartao p {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--verde-medio);
+  margin-bottom: 20px;
+}
+.imagem-cartao {
+  flex: 1;
+  min-height: 180px;
+  font-size: 12px;
+}
+.faixa-branca {
+  height: 28px;
+  background: white;
+}
+.rodape {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  background: var(--verde-profundo-rodape);
+}
+.rodape p {
+  font-size: 13px;
+  color: white;
+}
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.popup.aberto {
+  display: flex;
+}
+.popup-caixa {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  min-height: 350px;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+}
+.popup-fechar {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  border: none;
+  background: none;
+  font-size: 22px;
+  color: var(--verde-floresta);
+  cursor: pointer;
+}
+.popup-caixa h3 {
+  font-size: 22px;
+  color: var(--verde-floresta);
+  margin-bottom: 6px;
+}
+.popup-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--verde-medio);
+}
+.respiracao {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 30px 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circulo {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--verde-claro);
+  transform: scale(0.55);
+  transition: transform 4s ease-in-out;
+}
+.circulo.inspirar {
+  transform: scale(1);
+  transition-duration: 4s;
+}
+.circulo.segurar {
+  transform: scale(1);
+}
+.circulo.expirar {
+  transform: scale(0.55);
+  transition-duration: 6s;
+}
+.instrucao {
+  position: relative;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--verde-floresta);
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saúde mental | Aprende+</title>
+  <link rel="stylesheet" href="./assets/css/SaudeMental.css">
+</head>
+<body>
+  <header class="menu">
+    <span class="logo">APRENDE+</span>
+    <nav class="links">
+      <a href="#sobre">Sobre nós</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+  <section class="topo" id="sobre">
+    <div class="topo-texto">
+      <h1>Saúde mental</h1>
+      <h2>CUIDE DA SUA MENTE, TAMBÉM É SAÚDE .</h2>
+      <p>
+        A saúde mental é essencial para o seu bem-estar, sua motivação
+        e qualidade de vida. Aqui você encontra informações, recursos e
+        apoio para lidar com os desafios do dia a dia.
+      </p>
+    </div>
+    <img src="./assets/img/MenteLimpa.png" alt="Cuidando da mente" class="imagem-topo">
+  </section>
+  <section class="meditacao">
+    <div class="meditacao-texto">
+      <h2>Respire fundo.<br>Você não precisa<br>resolver tudo agora.</h2>
+      <p>
+        Tire alguns minutos para você. A meditação pode
+        te ajudar a acalmar a mente, reduzir o estresse
+        e voltar o foco para o que realmente importa.
+      </p>
+      <button class="botao-meditar" id="botaoMeditar">
+        <span class="play">▶</span> Começar meditação
+      </button>
+    </div>
+    <div class="imagens-meditacao">
+      <img src="./assets/img/meditando.png" alt="Descansando a mente" class="imagem-meditando">
+      <img src="./assets/img/meditação.png" alt="Descansando a mente" class="imagem-meditacao">
+    </div>
+  </section>
+  <section class="habitos">
+    <h2>Pequenos habitos,<br>grandes mudanças!</h2>
+    <p class="habitos-texto">
+      Confira algumas dicas e conteúdos que podem te ajudar a cuidar melhor da sua mente e do seu dia a dia.
+    </p>
+    <div class="cartoes">
+      <div class="cartao">
+        <h3>Qualidade do sono</h3>
+        <p>Entenda como o sono afeta seu humor, concentração e produtividade, e veja dicas para melhorar sua rotina.</p>
+        <img src="./assets/img/Insomnia-bro.png" alt="Não consegue dormir" class="imagem-cartao">
+      </div>
+      <div class="cartao">
+        <h3>Técnicas de relaxamento</h3>
+        <p>Respiração, meditação e mindfulness para acalmar a mente e reduzir a tensão.</p>
+        <img src="./assets/img/Mental health-bro.png" alt="Relaxando a mente" class="imagem-cartao">
+      </div>
+      <div class="cartao">
+        <h3>Sinais de alerta</h3>
+        <p>Saiba identificar quando é hora de buscar ajuda profissional e não ignore os sinais.</p>
+        <img src="./assets/img/Psychologist-bro.png" alt="Sinais de alerta" class="imagem-cartao">
+      </div>
+    </div>
+  </section>
+  <div class="faixa-branca"></div>
+  <footer class="rodape" id="contato">
+    <p>© 2026 Aprende+. Todos os direitos reservados.</p>
+  </footer>
+  <div class="popup" id="popup">
+    <div class="popup-caixa" role="dialog" aria-modal="true" aria-labelledby="tituloMeditacao">
+      <button class="popup-fechar" id="botaoFechar" aria-label="Fechar">✕</button>
+      <h3 id="tituloMeditacao">Respiração guiada</h3>
+      <p class="popup-sub">Acompanhe o círculo e respire no ritmo dele.</p>
+      <div class="respiracao">
+        <div class="circulo" id="circulo"></div>
+        <span class="instrucao" id="instrucao">Pronto?</span>
+      </div>
+      <button class="botao-meditar" id="botaoIniciar">Iniciar</button>
+    </div>
+  </div>
+  <script src="./assets/js/SaudeMental.js"></script>
+</body>
+</html>
