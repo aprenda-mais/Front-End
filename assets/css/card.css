@@ -1,0 +1,169 @@
+
+/* --- TIPOGRAFIA --- */
+@font-face {
+  font-family: "Inter";
+  font-weight: 100 900;
+  font-style: normal;
+  src: url("../fonts/Inter-VariableFont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 100 900;
+  font-style: italic;
+  src: url("../fonts/Inter-Italic-VariableFont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/Poppins-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/Poppins-Bold.ttf") format("truetype");
+}
+*{
+font-family: Poppins, Inter, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.task-card{
+    display: flex;
+    width: 23.625rem;
+    height: 23.75rem;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.5rem;
+    border: 1px solid #E2E8E2;
+    background: #FFF;
+}
+.task-card-content{
+    display: flex;
+padding: 1.25rem;
+flex-direction: column;
+align-items: center;
+gap: 2.625rem;
+flex: 1 0 0;
+align-self: stretch;
+}
+.header-card{
+    display: flex;
+align-items: center;
+gap: 11.25rem;
+}
+.task-pill-header{
+    display: flex;
+padding: 0.375rem 0.625rem;
+align-items: center;
+ flex-shrink: 0;
+border-radius: 62.4375rem;
+border: 0.5px solid #224A3B;
+background: #F3FAF4;
+color: #224A3B;
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: #224A3B;
+font-family: Inter, sans-serif;
+font-size: 0.6875rem;
+font-style: normal;
+font-weight: 100;
+line-height: normal;
+}
+.task-title{
+    color: #2D5B46;
+font-size: 2rem;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+}
+.cta-task{
+    display: flex;
+    gap: 0.75rem;
+    flex-direction: column;
+    align-items: center;
+}
+.task-cadastro{
+    gap: 2rem;
+}
+.cta-login{
+    color: #224A3B;
+text-align: center;
+font-size: 0.8125rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-decoration: none;
+cursor: pointer;
+}
+.btn-task{
+display: flex;
+width: 8.75rem;
+height: 2.625rem;
+padding: 0.625rem;
+justify-content: center;
+align-items: center;
+gap: 0.9375rem;
+border-radius: 0.9375rem;
+border: 1px solid #E2E8E2;
+background: #D9F9E1;
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+color: #2D5B46;
+font-size: 0.8125rem;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+text-decoration: none;
+}
+.btn-task svg{
+    width: 1.5rem;
+height: 1.5rem;
+flex-shrink: 0;
+}
+.task-description{
+    color: #224A3B;
+font-size: 0.875rem;
+text-align: center;
+font-style: normal;
+align-self: stretch;
+font-weight: 400;
+line-height: 1.25rem; /* 142.857% */
+}
+.footer-card{
+    display: flex;
+flex-direction: column;
+align-items: center;
+gap: 0.625rem;
+}
+.task-pills{
+    display: flex;
+align-items: flex-start;
+align-content: flex-start;
+gap: 0.5rem;
+align-self: stretch;
+flex-wrap: wrap;
+}
+.task-pill-footer{
+    display: flex;
+padding: 0.375rem 0.625rem;
+align-items: flex-start;
+border-radius: 62.4375rem;
+background: #F3FAF4;
+color: #2D5B46;
+font-size: 0.6875rem;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
