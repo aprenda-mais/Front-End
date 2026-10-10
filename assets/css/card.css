@@ -154,6 +154,7 @@ align-content: flex-start;
 gap: 0.5rem;
 align-self: stretch;
 flex-wrap: wrap;
+list-style: none;
 }
 .task-pill-footer{
     display: flex;
@@ -166,4 +167,72 @@ font-size: 0.6875rem;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
+}
+
+.task-card-vermais{
+ border-radius: 1.5rem;
+border: 1px solid #E2E8E2;
+background: var(--paleta-tarefas, #F3FAF4);
+box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.04);
+ display: flex;
+width: 25.25rem;
+height: 15rem;
+padding: 1.25rem;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 1rem;
+aspect-ratio: 101/60;
+}
+.task-card-vermais .content h1 {
+text-align: left;
+color: #2D5B46;
+font-family: Poppins;
+font-size: 1.375rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.task-card-vermais .content .task-description {
+text-align: left;
+ color: #224A3B;
+font-family: Poppins;
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.25rem; 
+padding: 20px;
+}
+
+.task-card-vermais .content .task-pills .task-pill-footer {
+padding: 16px;
+color: #2D5B46;
+font-family: Poppins;
+font-size: 0.6875rem;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+
+}
+
+.task-title-vermais{
+ display: flex;
+}
+
+.task-title-vermais a{
+background: #D9F9E1;
+border: 1px solid #F3FAF4;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 100%;
+margin-left: 20px;
+width: 2.40625rem;
+height: 2.40625rem;
+aspect-ratio: 1/1;
+fill: var(--paleta-tarefas, #F3FAF4);
+stroke-width: 1px;
+stroke: var(--paleta-5, #D9F9E1);
+
 }
