@@ -31,6 +31,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+img {
+  display: block;
+  max-width: 100%;
+}
 body {
   font-family: 'Poppins', sans-serif;
   background: white;
@@ -39,7 +43,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 20px;
+  min-height: 56px;
+  padding: 8px clamp(16px, 5vw, 40px);
   font-size: 12px;
   color: var(--verde-floresta);
   background: white;
@@ -58,50 +63,52 @@ body {
 .topo {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  gap: 30px;
-  height: 380px;
-  padding: 0 40px;
+  align-items: center;
+  gap: clamp(24px, 5vw, 64px);
+  min-height: 380px;
+  padding: 32px clamp(20px, 5vw, 64px);
   background: var(--BgGradial, linear-gradient(104deg, #D9F9E1 10.49%, #B3EDBB 60.09%));
 }
 .topo-texto {
   max-width: 680px;
-  align-self: center;
+  min-width: 0;
 }
 .topo h1 {
-  font-size: 46px;
+  font-size: clamp(2.25rem, 5vw, 2.875rem);
   font-weight: 700;
   color: var(--verde-floresta);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .topo h2 {
   font-size: 15px;
   font-weight: 800;
   color: var(--verde-medio);
-  margin-bottom: 25px;
+  margin-bottom: 16px;
 }
 .topo p {
-  font-size: 20px;
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
   line-height: 1.6;
   color: var(--verde-medio);
 }
 .imagem-topo {
-  height: 420px;
-  width: auto;
+  width: min(42%, 32rem);
+  height: auto;
+  flex: 0 1 auto;
 }
 .meditacao {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
-  padding: 50px 40px;
+  padding: clamp(36px, 5vw, 64px) clamp(20px, 5vw, 64px);
   background: var(--fundo-meditacao);
 }
 .meditacao-texto {
   max-width: 420px;
+  min-width: 0;
 }
 .meditacao h2 {
-  font-size: 30px;
+  font-size: clamp(1.6rem, 3vw, 1.875rem);
   font-weight: 700;
   line-height: 1.4;
   color: var(--verde-floresta);
@@ -137,21 +144,23 @@ body {
 .imagens-meditacao {
   display: flex;
   align-items: flex-end;
-  gap: 10px;
+  justify-content: flex-end;
+  gap: clamp(8px, 1.5vw, 20px);
+  min-width: 0;
 }
 .imagem-meditacao {
-  width: auto;
-  height: 470px;
+  width: min(48%, 20rem);
+  height: auto;
 }
 .imagem-meditando {
-  width: auto;
-  height: 470px;
-  transform: scale(1.12) translateY(-15px);
+  width: min(48%, 20rem);
+  height: auto;
+  transform: translateY(-12px);
   transform-origin: bottom;
 }
 .habitos {
   background: var(--verde-floresta);
-  padding: 70px 40px 100px;
+  padding: clamp(48px, 7vw, 80px) clamp(20px, 5vw, 64px) 80px;
   text-align: center;
   color: white;
 }
@@ -163,13 +172,14 @@ body {
 }
 .habitos-texto {
   font-size: 16px;
-  margin-bottom: 70px;
+  max-width: 680px;
+  margin: 0 auto 48px;
 }
 .cartoes {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  gap: 40px;
+  gap: clamp(20px, 3vw, 40px);
   flex-wrap: wrap;
   max-width: 1100px;
   margin: 0 auto;
@@ -177,7 +187,7 @@ body {
 .cartao {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: min(100%, 320px);
   min-height: 400px;
   padding: 28px 24px 28px;
   background: #fbf8f7;
@@ -201,6 +211,8 @@ body {
   flex: 1;
   min-height: 180px;
   font-size: 12px;
+  width: 100%;
+  object-fit: contain;
 }
 .faixa-branca {
   height: 28px;
@@ -216,6 +228,8 @@ body {
 .rodape p {
   font-size: 13px;
   color: white;
+  padding: 0 16px;
+  text-align: center;
 }
 .popup {
   display: none;
@@ -223,7 +237,10 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  height: 100dvh;
+  padding: 16px;
+  overflow-y: auto;
   background: rgba(0, 0, 0, 0.6);
   align-items: center;
   justify-content: center;
@@ -238,10 +255,12 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 90%;
+  width: min(100%, 600px);
   max-width: 600px;
   min-height: 350px;
-  padding: 40px;
+  max-height: 100%;
+  padding: clamp(24px, 6vw, 40px);
+  overflow-y: auto;
   background: white;
   border-radius: 20px;
 }
@@ -270,6 +289,7 @@ body {
   width: 220px;
   height: 220px;
   margin: 30px 0 10px;
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -298,4 +318,119 @@ body {
   font-size: 18px;
   font-weight: 600;
   color: var(--verde-floresta);
+}
+
+@media (max-width: 800px) {
+  .topo {
+    gap: 24px;
+    min-height: 0;
+  }
+
+  .imagem-topo {
+    width: min(40%, 20rem);
+  }
+
+  .meditacao {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .meditacao-texto {
+    max-width: 600px;
+  }
+
+  .imagens-meditacao {
+    justify-content: center;
+  }
+
+  .imagem-meditacao,
+  .imagem-meditando {
+    width: min(48%, 20rem);
+  }
+
+  .cartoes {
+    max-width: 680px;
+  }
+}
+
+@media (max-width: 520px) {
+  .menu {
+    gap: 16px;
+    font-size: 11px;
+  }
+
+  .links {
+    gap: 12px;
+  }
+
+  .topo {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-block: 36px 0;
+  }
+
+  .topo h1 {
+    margin-bottom: 16px;
+  }
+
+  .topo h2 {
+    margin-bottom: 12px;
+  }
+
+  .imagem-topo {
+    align-self: center;
+    width: min(100%, 22rem);
+  }
+
+  .meditacao {
+    gap: 32px;
+  }
+
+  .meditacao p {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .botao-meditar {
+    justify-content: center;
+    width: 100%;
+    max-width: 320px;
+    gap: 12px;
+    padding: 15px 18px;
+    font-size: 0.95rem;
+  }
+
+  .imagens-meditacao {
+    align-items: center;
+  }
+
+  .imagem-meditando {
+    transform: none;
+  }
+
+  .habitos-texto {
+    font-size: 0.95rem;
+  }
+
+  .cartoes {
+    align-items: center;
+  }
+
+  .cartao {
+    min-height: 0;
+  }
+
+  .imagem-cartao {
+    height: auto;
+    max-height: 220px;
+  }
+
+  .popup-caixa {
+    min-height: 0;
+  }
+
+  .respiracao {
+    width: min(220px, 60vw);
+    height: min(220px, 60vw);
+  }
 }

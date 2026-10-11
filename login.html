@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Entre ou crie sua conta no Aprende+."
+    />
+    <title>Entrar | Aprende+</title>
+    <link rel="stylesheet" href="assets/css/login.css" />
+  </head>
+  <body>
+    <main class="auth-page">
+      <a class="auth-back" href="index.html">← Voltar para o início</a>
+
+      <section class="auth-card" aria-labelledby="auth-title">
+        <a class="auth-brand" href="index.html" aria-label="Aprende+, início">
+          <img src="assets/img/logo.svg" alt="" width="56" height="56" />
+          <span>Aprende<span class="brand-plus">+</span></span>
+        </a>
+
+        <h1 id="auth-title">Que bom ter você por aqui</h1>
+        <p class="auth-intro">Entre na sua conta ou crie uma para começar.</p>
+
+        <div class="auth-tabs" role="group" aria-label="Escolha uma opção">
+          <button class="auth-tab is-active" id="tabLogin" type="button" aria-pressed="true">
+            Entrar
+          </button>
+          <button class="auth-tab" id="tabCadastro" type="button" aria-pressed="false">
+            Criar conta
+          </button>
+        </div>
+
+        <form class="auth-form" id="authForm">
+          <div class="form-field" id="nomeField" hidden>
+            <label for="nome">Como podemos te chamar?</label>
+            <input
+              id="nome"
+              name="nome"
+              type="text"
+              autocomplete="name"
+              placeholder="Seu nome"
+              minlength="2"
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="email">E-mail</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="voce@exemplo.com"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="senha">Senha</label>
+            <input
+              id="senha"
+              name="senha"
+              type="password"
+              autocomplete="current-password"
+              placeholder="Sua senha"
+              minlength="8"
+              required
+            />
+            <small id="senhaAjuda" hidden>Use pelo menos 8 caracteres.</small>
+          </div>
+
+          <button class="auth-submit" id="submitButton" type="submit">Entrar</button>
+          <p class="auth-notice" id="authNotice" role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="auth-note">
+          Um passo de cada vez. Seu espaço para aprender e cuidar de você.
+        </p>
+      </section>
+    </main>
+    <script src="assets/js/login.js"></script>
+  </body>
+</html>

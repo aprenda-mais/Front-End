@@ -1,0 +1,242 @@
+@font-face {
+  font-family: "Inter";
+  font-weight: 100 900;
+  font-style: normal;
+  src: url("../fonts/Inter-VariableFont.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500 800;
+  font-style: normal;
+  src: url("../fonts/Poppins-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 700 800;
+  font-style: normal;
+  src: url("../fonts/Poppins-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  font-family: Poppins, Inter, sans-serif;
+  color: #2d5b46;
+  background: #f5faf6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.auth-page {
+  display: grid;
+  min-height: 100vh;
+  min-height: 100dvh;
+  place-items: center;
+  padding: 64px 20px 32px;
+  background:
+    radial-gradient(ellipse at 15% 15%, rgba(179, 237, 187, 0.45), transparent 38%),
+    #f5faf6;
+}
+
+.auth-back {
+  position: absolute;
+  top: 24px;
+  left: max(20px, calc((100vw - 440px) / 2));
+  color: #456b58;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.auth-back:hover {
+  text-decoration: underline;
+}
+
+.auth-card {
+  width: min(100%, 440px);
+  padding: clamp(24px, 6vw, 40px);
+  background: #fff;
+  border: 1px solid #e2ebe3;
+  border-radius: 20px;
+  box-shadow: 0 16px 44px rgba(34, 74, 59, 0.08);
+}
+
+.auth-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  color: #2d5b46;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.auth-brand img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.brand-plus {
+  color: #58ae8e;
+}
+
+.auth-card h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.5rem, 5vw, 1.8rem);
+  line-height: 1.25;
+}
+
+.auth-intro {
+  margin: 0;
+  color: #687c70;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.auth-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  margin: 28px 0 24px;
+  padding: 4px;
+  background: #f2f7f3;
+  border-radius: 12px;
+}
+
+.auth-tab {
+  min-height: 42px;
+  padding: 8px 12px;
+  color: #597163;
+  background: transparent;
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.auth-tab.is-active {
+  color: #224a3b;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(34, 74, 59, 0.12);
+  font-weight: 700;
+}
+
+.auth-form {
+  display: grid;
+  gap: 18px;
+}
+
+.form-field {
+  display: grid;
+  gap: 7px;
+}
+
+.form-field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.form-field input {
+  width: 100%;
+  min-height: 48px;
+  padding: 11px 13px;
+  color: #224a3b;
+  background: #fff;
+  border: 1px solid #cbd9ce;
+  border-radius: 10px;
+  outline: none;
+}
+
+.form-field input::placeholder {
+  color: #98a79c;
+}
+
+.form-field input:focus-visible {
+  border-color: #58ae8e;
+  box-shadow: 0 0 0 3px rgba(88, 174, 142, 0.18);
+}
+
+.form-field small {
+  color: #687c70;
+  font-size: 0.78rem;
+}
+
+.auth-submit {
+  min-height: 48px;
+  margin-top: 3px;
+  padding: 11px 16px;
+  color: #fff;
+  background: #2d5b46;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.auth-submit:hover {
+  background: #224a3b;
+}
+
+.auth-submit:focus-visible,
+.auth-tab:focus-visible,
+.auth-back:focus-visible,
+.auth-brand:focus-visible {
+  outline: 3px solid #58ae8e;
+  outline-offset: 3px;
+}
+
+.auth-notice {
+  margin: -6px 0 0;
+  color: #456b58;
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.auth-notice:empty {
+  display: none;
+}
+
+.auth-note {
+  margin: 24px 0 0;
+  padding-top: 18px;
+  color: #74857a;
+  border-top: 1px solid #edf2ee;
+  font-family: Inter, sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 420px) {
+  .auth-page {
+    padding: 72px 16px 20px;
+  }
+
+  .auth-back {
+    top: 20px;
+    left: 16px;
+  }
+}
