@@ -5,5 +5,6 @@
       navToggle.addEventListener('click', () => {
         const aberto = nav.classList.toggle('is-open');
         navToggle.setAttribute('aria-expanded', aberto);
+        teste
       });
     }
