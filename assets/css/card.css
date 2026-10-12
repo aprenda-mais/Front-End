@@ -37,8 +37,7 @@ body{
     display: flex;
     flex-direction: column;
     background-color: black;
-    justify-content: center;
-    align-items: center;
+
     padding: 10px;
 }
 .task-card{
@@ -253,8 +252,76 @@ stroke: var(--paleta-5, #D9F9E1);
   box-sizing: border-box;
   flex-shrink: 0;
 }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
-.teeth-icon {
+/* --- GRELHA RESPONSIVA --- */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 234px);
+  gap: 20px;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 234px);
+  }
+}
+
+@media (max-width: 530px) {
+  .cards-grid {
+    grid-template-columns: 234px;
+  }
+}
+
+/* --- WRAPPER DO CARD & INPUT INVISÍVEL --- */
+.card-item {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+.card-item input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* --- CARDS (SUA ESTRUTURA EXATA) --- */
+.task-card-teeth,
+.task-card-coffee,
+.task-card-bath,
+.task-card-lunch,
+.task-card-bed,
+.task-card-other {
+  width: 234px;
+  height: 130px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 17px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  box-sizing: border-box;
+  flex-shrink: 0;
+
+  border: 2px solid transparent;
+  box-shadow: 0 8px 20px rgba(45, 91, 70, 0.06);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* --- ÍCONES (SUA ESTRUTURA EXATA) --- */
+.teeth-icon,
+.coffee-icon,
+.bath-icon,
+.lunch-icon,
+.bed-icon,
+.other-icon {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -263,18 +330,44 @@ stroke: var(--paleta-5, #D9F9E1);
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
-.task-card-teeth h3 {
+.teeth-icon svg,
+.coffee-icon svg,
+.bath-icon svg,
+.lunch-icon svg,
+.bed-icon svg,
+.other-icon svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* --- TÍTULOS (SUA ESTRUTURA EXATA) --- */
+.task-card-teeth h3,
+.task-card-coffee h3,
+.task-card-bath h3,
+.task-card-lunch h3,
+.task-card-bed h3,
+.task-card-other h3 {
   margin: 0;
   color: #2d5b46;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 700;
   text-align: center;
 }
 
-.teeth-icon svg {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
+/* --- HOVER --- */
+.card-item:hover [class^="task-card-"] {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(45, 91, 70, 0.12);
+}
+
+/* --- SELECIONADO (:checked) --- */
+.card-item input[type="radio"]:checked + [class^="task-card-"] {
+  border-color: #2d5b46;
+  box-shadow: 0 0 0 1px #2d5b46, 0 10px 20px rgba(45, 91, 70, 0.12);
+  transform: translateY(-2px);
 }
