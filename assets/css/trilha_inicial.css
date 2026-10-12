@@ -1,0 +1,78 @@
+@import "card.css";
+
+/* Apenas ajustes de layout da página e botão continuar */
+body {
+  background-color: #f1f7f4;
+  min-height: 100vh;
+  justify-content: space-between;
+  padding: 40px 60px;
+}
+
+/* Header / Marca */
+.header-topo {
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #2D5B46;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.brand-logo svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Estrutura central e título */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  margin: auto;
+  width: 100%;
+}
+
+.page-title {
+  color: #2D5B46;
+  font-size: 2.6rem;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  max-width: 520px;
+}
+
+/* Grelha dos 3 cards */
+.trilhas-grid {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+/* Rodapé / Botão Continuar */
+.page-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.btn-continuar {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #E2E8E2;
+  color: #698979;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
