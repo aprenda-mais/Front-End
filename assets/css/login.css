@@ -1,242 +1,361 @@
-@font-face {
-  font-family: "Inter";
-  font-weight: 100 900;
-  font-style: normal;
-  src: url("../fonts/Inter-VariableFont.ttf") format("truetype");
-  font-display: swap;
-}
+@import 'style.css';
 
-@font-face {
-  font-family: "Poppins";
-  font-weight: 500 800;
-  font-style: normal;
-  src: url("../fonts/Poppins-Medium.ttf") format("truetype");
-  font-display: swap;
-}
+/* CONFIGURAÇÕES GERAIS */
 
-@font-face {
-  font-family: "Poppins";
-  font-weight: 700 800;
-  font-style: normal;
-  src: url("../fonts/Poppins-Bold.ttf") format("truetype");
-  font-display: swap;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
-  font-family: Poppins, Inter, sans-serif;
-  color: #2d5b46;
-  background: #f5faf6;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+    --verde-escuro: #2d5c49;
+    --verde-claro: #b0efb9;
+    --verde-texto: #315b49;
+    --borda: #d8e3da;
+    --texto-secundario: #56675c;
 }
 
-* {
-  box-sizing: border-box;
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
 }
 
 body {
-  min-width: 320px;
-  min-height: 100vh;
-  min-height: 100dvh;
-  margin: 0;
+    min-height: 100vh;
+    color: var(--verde-texto);
 }
 
-button,
-input {
-  font: inherit;
+/*principal*/
+
+.container {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 65px 20px 10px;
 }
 
-.auth-page {
-  display: grid;
-  min-height: 100vh;
-  min-height: 100dvh;
-  place-items: center;
-  padding: 64px 20px 32px;
-  background:
-    radial-gradient(ellipse at 15% 15%, rgba(179, 237, 187, 0.45), transparent 38%),
-    #f5faf6;
+ /*=================================
+   INTRODUÇÃO
+================================= */
+
+.introducao {
+    text-align: center;
 }
 
-.auth-back {
-  position: absolute;
-  top: 24px;
-  left: max(20px, calc((100vw - 440px) / 2));
-  color: #456b58;
-  font-size: 0.9rem;
-  text-decoration: none;
+.introducao h1 {
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 5px;
 }
 
-.auth-back:hover {
-  text-decoration: underline;
+.introducao p {
+    font-size: 17px;
+    line-height: 1.35;
 }
 
-.auth-card {
-  width: min(100%, 440px);
-  padding: clamp(24px, 6vw, 40px);
-  background: #fff;
-  border: 1px solid #e2ebe3;
-  border-radius: 20px;
-  box-shadow: 0 16px 44px rgba(34, 74, 59, 0.08);
+/* =================================
+   FORMULÁRIO
+================================= */
+
+.formulario {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #fff;
+    border-radius: 17px;
 }
 
-.auth-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 28px;
-  color: #2d5b46;
-  font-size: 1.15rem;
-  font-weight: 700;
-  text-decoration: none;
+/* =================================
+   CAMPOS
+================================= */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.auth-brand img {
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
+.campo label {
+    font-size: 13px;
+    font-weight: 600;
 }
 
-.brand-plus {
-  color: #58ae8e;
+.campo input {
+    width: 100%;
+    height: 47px;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+
+    background: #fff;
+    color: #333;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    outline: none;
 }
 
-.auth-card h1 {
-  margin: 0 0 8px;
-  font-size: clamp(1.5rem, 5vw, 1.8rem);
-  line-height: 1.25;
+.campo input:focus {
+    border-color: var(--verde-escuro);
 }
 
-.auth-intro {
-  margin: 0;
-  color: #687c70;
-  font-size: 0.95rem;
-  line-height: 1.6;
+.campo input::placeholder {
+    color: #849087;
 }
 
-.auth-tabs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4px;
-  margin: 28px 0 24px;
-  padding: 4px;
-  background: #f2f7f3;
-  border-radius: 12px;
+.campo small {
+    font-size: 11px;
+    color: #68766c;
+    margin-top: -2px;
 }
 
-.auth-tab {
-  min-height: 42px;
-  padding: 8px 12px;
-  color: #597163;
-  background: transparent;
-  border: 0;
-  border-radius: 9px;
-  cursor: pointer;
+/* =================================
+   BOTÃO PRINCIPAL
+================================= */
+
+.botao-principal {
+    width: 100%;
+    min-height: 49px;
+
+    border: none;
+    border-radius: 13px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 3px 4px #00000030;
+    transition: opacity 0.2s, transform 0.2s;
 }
 
-.auth-tab.is-active {
-  color: #224a3b;
-  background: #fff;
-  box-shadow: 0 1px 4px rgba(34, 74, 59, 0.12);
-  font-weight: 700;
+.botao-principal:hover {
+    opacity: 0.9;
 }
 
-.auth-form {
-  display: grid;
-  gap: 18px;
+.botao-principal:active {
+    transform: scale(0.99);
 }
 
-.form-field {
-  display: grid;
-  gap: 7px;
+/* =================================
+   ALTERNATIVA DE ACESSO
+================================= */
+
+.alternativa {
+    text-align: center;
+    font-size: 13px;
+    color: var(--texto-secundario);
 }
 
-.form-field label {
-  font-size: 0.9rem;
-  font-weight: 600;
+.alternativa a,
+.termos a {
+    color: var(--verde-texto);
+    font-weight: bold;
+    text-decoration: underline;
 }
 
-.form-field input {
-  width: 100%;
-  min-height: 48px;
-  padding: 11px 13px;
-  color: #224a3b;
-  background: #fff;
-  border: 1px solid #cbd9ce;
-  border-radius: 10px;
-  outline: none;
+/* =================================
+   AVISOS
+================================= */
+
+.aviso {
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.4;
 }
 
-.form-field input::placeholder {
-  color: #98a79c;
+/* =================================
+   TERMOS DE USO
+================================= */
+
+.termos {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--texto-secundario);
 }
 
-.form-field input:focus-visible {
-  border-color: #58ae8e;
-  box-shadow: 0 0 0 3px rgba(88, 174, 142, 0.18);
+.termos input {
+    margin-top: 3px;
+    accent-color: var(--verde-escuro);
+    flex-shrink: 0;
 }
 
-.form-field small {
-  color: #687c70;
-  font-size: 0.78rem;
+/* =================================
+   PÁGINA DE LOGIN
+================================= */
+
+.pagina-login {
+    background: var(--verde-escuro);
 }
 
-.auth-submit {
-  min-height: 48px;
-  margin-top: 3px;
-  padding: 11px 16px;
-  color: #fff;
-  background: #2d5b46;
-  border: 0;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 700;
+.pagina-login .topo,
+.pagina-login .introducao h1 {
+    color: var(--verde-claro);
 }
 
-.auth-submit:hover {
-  background: #224a3b;
+.pagina-login .introducao {
+    margin-bottom: 18px;
 }
 
-.auth-submit:focus-visible,
-.auth-tab:focus-visible,
-.auth-back:focus-visible,
-.auth-brand:focus-visible {
-  outline: 3px solid #58ae8e;
-  outline-offset: 3px;
+.pagina-login .introducao p {
+    color: #78bba1;
 }
 
-.auth-notice {
-  margin: -6px 0 0;
-  color: #456b58;
-  font-size: 0.86rem;
-  line-height: 1.5;
+.pagina-login .formulario {
+    max-width: 420px;
+    padding: 24px;
+    gap: 13px;
 }
 
-.auth-notice:empty {
-  display: none;
+.pagina-login .botao-principal {
+    background: var(--verde-escuro);
+    color: var(--verde-claro);
 }
 
-.auth-note {
-  margin: 24px 0 0;
-  padding-top: 18px;
-  color: #74857a;
-  border-top: 1px solid #edf2ee;
-  font-family: Inter, sans-serif;
-  font-size: 0.8rem;
-  line-height: 1.6;
-  text-align: center;
+/*CELULARES*/
+
+@media (max-width: 500px) {
+    .topo {
+        top: 14px;
+        left: 16px;
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 55px 14px 10px;
+    }
+
+    .pagina-login .introducao {
+        margin-bottom: 15px;
+    }
+
+    .pagina-login .introducao h1 {
+        font-size: 25px;
+    }
+
+    .pagina-login .introducao p {
+        font-size: 14px;
+    }
+
+    .pagina-login .formulario {
+        padding: 18px;
+        gap: 10px;
+    }
+
+    .pagina-login .campo {
+        gap: 5px;
+    }
+
+    .pagina-login .campo input {
+        height: 38px;
+    }
+
+    .pagina-login .botao-principal {
+        min-height: 40px;
+    }
+
+    .pagina-cadastro .introducao {
+        margin-bottom: 10px;
+    }
+
+    .pagina-cadastro .formulario {
+        padding: 12px 16px;
+        gap: 7px;
+    }
+
+    .pagina-cadastro .campo input {
+        height: 31px;
+        padding: 0 10px;
+    }
+
+    .pagina-cadastro .termos {
+        gap: 7px;
+        font-size: 10px;
+        line-height: 1.3;
+    }
+
+    .pagina-cadastro .botao-principal {
+        min-height: 33px;
+    }
 }
 
-[hidden] {
-  display: none !important;
-}
+/* =================================
+   TELAS COM POUCA ALTURA
+================================= */
 
-@media (max-width: 420px) {
-  .auth-page {
-    padding: 72px 16px 20px;
-  }
+@media (max-height: 650px) {
+    .container {
+        padding-top: 48px;
+        padding-bottom: 6px;
+    }
 
-  .auth-back {
-    top: 20px;
-    left: 16px;
-  }
+    .pagina-login .introducao {
+        margin-bottom: 8px;
+    }
+
+    .pagina-login .formulario {
+        padding: 12px 16px;
+        gap: 7px;
+    }
+
+    .pagina-login .campo input {
+        height: 33px;
+    }
+
+    .pagina-login .botao-principal {
+        min-height: 35px;
+    }
+
+    .pagina-cadastro .introducao {
+        margin-bottom: 7px;
+    }
+
+    .pagina-cadastro .introducao h1 {
+        font-size: 20px;
+    }
+
+    .pagina-cadastro .introducao p {
+        font-size: 11px;
+    }
+
+    .pagina-cadastro .formulario {
+        padding: 8px 14px;
+        gap: 5px;
+    }
+
+    .pagina-cadastro .campo input {
+        height: 28px;
+    }
+
+    .pagina-cadastro .campo label {
+        font-size: 10px;
+    }
+
+    .pagina-cadastro .campo small {
+        font-size: 9px;
+    }
+
+    .pagina-cadastro .botao-principal {
+        min-height: 30px;
+    }
 }

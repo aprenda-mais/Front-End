@@ -1,0 +1,737 @@
+@import 'style.css';
+/*BASE*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --verde-escuro: #285b45;
+    --verde-medio: #438663;
+    --verde-claro: #d9f8e1;
+    --verde-fundo: #f6fbf7;
+    --verde-texto: #315b49;
+    --borda: #e1ebe3;
+    --texto: #263b30;
+    --texto-secundario: #68786d;
+    --branco: #fff;
+    --sombra: 0 4px 12px rgba(45, 92, 73, .055);
+}
+
+[hidden] {
+    display: none !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--verde-fundo);
+    color: var(--texto);
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #73bc8a;
+    outline-offset: 3px;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+.navbar {
+    min-height: 76px;
+    width: 100%;
+    padding: 8px 3.4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: var(--branco);
+    border-bottom: 1px solid #d4ddd6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
+}
+
+.marca {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    color: #14572d;
+    text-decoration: none;
+}
+
+.marca-logo {
+    width: 54px;
+    height: 54px;
+    display: block;
+    object-fit: contain;
+}
+
+.marca-texto {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+}
+
+.marca-texto strong {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.marca-texto small {
+    margin-top: 4px;
+    color: #718276;
+    font-size: 10px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #0d5428;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+    transition: color .2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--verde-medio);
+}
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+.pagina {
+    width: min(1200px, 94.5%);
+    margin: 12px auto 28px;
+}
+
+.secao {
+    margin-top: 15px;
+    scroll-margin-top: 20px;
+}
+
+.titulo-secao {
+    margin-bottom: 10px;
+    color: var(--verde-texto);
+    font-size: 21px;
+    line-height: 1.3;
+    font-weight: 800;
+    letter-spacing: -.45px;
+}
+
+/* =========================
+   PAUSAS CONSCIENTES
+========================= */
+.pausas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.pausa-card {
+    min-width: 0;
+    min-height: 87px;
+    padding: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+    box-shadow: var(--sombra);
+}
+
+.pausa-conteudo {
+    min-width: 0;
+}
+
+.etiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--verde-texto);
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .15px;
+}
+
+.pausa-conteudo h2 {
+    margin: 5px 0 4px;
+    color: var(--verde-texto);
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.pausa-conteudo p {
+    color: #4e6658;
+    font-size: 10.5px;
+    line-height: 1.45;
+}
+
+.botao-pausa {
+    flex: 0 0 auto;
+    padding: 9px 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: var(--branco);
+    background: #214f3e;
+    border: 0;
+    border-radius: 24px;
+    font-size: 10px;
+    font-weight: 800;
+    white-space: nowrap;
+    transition: background .2s, transform .2s;
+}
+
+.botao-pausa:hover {
+    background: var(--verde-medio);
+    transform: translateY(-1px);
+}
+
+/* =========================
+   MAPA DA ROTINA
+========================= */
+.rotina-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 9px;
+}
+
+.rotina-card {
+    min-width: 0;
+    min-height: 89px;
+    padding: 10px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+    box-shadow: var(--sombra);
+}
+
+.rotina-etiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 8px;
+    color: var(--verde-texto);
+    background: #eaf7ee;
+    border-radius: 15px;
+    font-size: 8px;
+    font-weight: 800;
+}
+
+.rotina-card h3 {
+    margin: 8px 0 5px;
+    color: var(--verde-texto);
+    font-size: 13px;
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+.rotina-card p {
+    color: #4e6658;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+/* =========================
+   CARDS DE MICRO-HÁBITOS
+========================= */
+.habitos-grid {
+    width: min(815px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 9px;
+}
+
+.habito-card {
+    min-width: 0;
+    min-height: 267px;
+    overflow: hidden;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    box-shadow: var(--sombra);
+}
+
+.habito-padrao {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.habito-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 7px;
+}
+
+.tag {
+    min-height: 22px;
+    padding: 4px 7px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    font-size: 8px;
+    white-space: nowrap;
+}
+
+.tag-outline {
+    color: var(--verde-texto);
+    background: #f7fbf8;
+    border: 1px solid #a8b9ad;
+}
+
+.tag-preenchida {
+    color: var(--verde-texto);
+    background: #eaf7ee;
+    font-weight: 800;
+}
+
+.habito-centro {
+    min-height: 132px;
+    padding: 24px 0 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 27px;
+    text-align: center;
+}
+
+.habito-centro h3 {
+    color: var(--verde-texto);
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -.5px;
+}
+
+.botao-iniciar {
+    min-width: 100px;
+    padding: 7px 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    color: #245640;
+    background: #d6f8df;
+    border: 1px solid #d0f0d8;
+    border-radius: 12px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .15);
+    font-size: 10px;
+    font-weight: 800;
+    transition: background .2s, transform .2s;
+}
+
+.botao-iniciar:hover {
+    background: #c2efcf;
+    transform: translateY(-1px);
+}
+
+.habito-informacoes {
+    margin-top: auto;
+}
+
+.habito-informacoes > p {
+    margin-bottom: 7px;
+    color: #405c4b;
+    font-size: 10px;
+    line-height: 1.45;
+    text-align: center;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tags span {
+    padding: 5px 7px;
+    color: var(--verde-texto);
+    background: #f0f8f2;
+    border-radius: 12px;
+    font-size: 8px;
+    font-weight: 700;
+}
+
+/* Card de Higiene do sono */
+.habito-destaque {
+    display: flex;
+    flex-direction: column;
+    background: #f3faf5;
+}
+
+.habito-destaque .habito-topo {
+    padding: 9px 10px 0;
+}
+
+.botao-ver-mais {
+    padding: 6px 11px;
+    color: var(--verde-texto);
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .12);
+    font-size: 8px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.habito-conteudo {
+    padding: 12px 10px 8px;
+}
+
+.desafio {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--verde-texto);
+    font-size: 8px;
+    font-weight: 800;
+}
+
+.habito-conteudo h3 {
+    margin-bottom: 5px;
+    color: var(--verde-texto);
+    font-size: 16px;
+    line-height: 1.45;
+    font-weight: 800;
+}
+
+.habito-conteudo > p {
+    color: #405c4b;
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+.checkin {
+    width: 100%;
+    min-width: 0;
+    margin-top: 8px;
+    padding: 4px 7px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--verde-texto);
+    background: var(--branco);
+    border: 1px solid #e3ebe5;
+    border-radius: 11px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .16);
+    text-align: left;
+}
+
+.icone-agua {
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+    display: grid;
+    place-items: center;
+    color: var(--verde-texto);
+    background: #eaf7ee;
+    border-radius: 50%;
+    font-size: 13px;
+}
+
+.checkin-texto {
+    min-width: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkin-texto strong {
+    font-size: 8px;
+    line-height: 1.3;
+}
+
+.checkin-texto small {
+    color: var(--texto-secundario);
+    font-size: 7px;
+    line-height: 1.3;
+}
+
+.checkin-seta {
+    flex: 0 0 auto;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.indicadores {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+.indicadores-centro {
+    min-height: 25px;
+    margin-top: auto;
+    padding-bottom: 7px;
+}
+
+.indicador {
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    background: #d5dfd7;
+    border-radius: 50%;
+}
+
+.indicador.atual {
+    background: #2d624b;
+}
+
+.destaque-rodape {
+    min-height: 60px;
+    padding: 15px 8px 10px;
+    background: var(--branco);
+    border-top: 1px solid #e7eee8;
+    text-align: center;
+}
+
+.destaque-rodape p {
+    color: #405c4b;
+    font-size: 10px;
+    line-height: 1.45;
+}
+
+/* =========================
+   PROGRESSO
+========================= */
+.progresso-card {
+    min-height: 196px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    box-shadow: var(--sombra);
+    text-align: center;
+}
+
+.progresso-card p {
+    color: var(--verde-texto);
+    font-size: clamp(18px, 2.5vw, 26px);
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+/* =========================
+   CONQUISTAS
+========================= */
+.conquista-card {
+    min-height: 119px;
+    padding: 15px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    box-shadow: var(--sombra);
+}
+
+.conquista-conteudo h3 {
+    margin: 6px 0 5px;
+    color: var(--verde-texto);
+    font-size: 17px;
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+.conquista-conteudo p {
+    color: #405c4b;
+    font-size: 11px;
+}
+
+.trofeu {
+    width: 85px;
+    height: 85px;
+    flex: 0 0 85px;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.trofeu svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* RODAPÉ*/
+
+.rodape-site {
+    margin-top: 35px;
+    padding: 18px 10px;
+    color: var(--texto-secundario);
+    border-top: 1px solid var(--borda);
+    text-align: center;
+    font-size: 11px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+@media (min-width: 1400px) {
+    .pagina {
+        width: min(1320px, 94%);
+    }
+
+    .habitos-grid {
+        width: min(900px, 100%);
+    }
+}
+
+@media (max-width: 760px) {
+    .navbar {
+        padding: 9px 4%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .pausa-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .botao-pausa {
+        align-self: flex-start;
+    }
+
+    .habitos-grid {
+        width: 100%;
+    }
+
+    .habito-centro h3 {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 560px) {
+    .navbar {
+        min-height: 70px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .marca-logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .marca {
+        gap: 8px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .pagina {
+        width: 92%;
+        margin-top: 14px;
+    }
+
+    .pausas,
+    .rotina-grid,
+    .habitos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pausa-card {
+        min-height: 0;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .pausa-conteudo h2 {
+        font-size: 16px;
+    }
+
+    .pausa-conteudo p {
+        font-size: 10px;
+    }
+
+    .rotina-card {
+        min-height: 82px;
+    }
+
+    .habito-card {
+        min-height: 245px;
+    }
+
+    .habito-padrao {
+        padding: 14px;
+    }
+
+    .habito-centro {
+        min-height: 120px;
+    }
+
+    .progresso-card {
+        min-height: 150px;
+        padding: 20px;
+    }
+
+    .conquista-card {
+        padding: 13px;
+    }
+
+    .trofeu {
+        width: 70px;
+        height: 70px;
+        flex-basis: 70px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}

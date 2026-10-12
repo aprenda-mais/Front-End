@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" href="../aprenda+/assets/css/cadastro.css">
+</head>
+
+<body class="pagina-cadastro">
+
+    <header class="topo">
+        <span class="icone-topo">♧</span>
+        <span>Cadastro</span>
+    </header>
+
+    <main class="container">
+
+        <section class="introducao">
+            <h1>Crie sua conta</h1>
+            <p>
+                Pequenos hábitos, mais cuidado com você.<br>
+                Comece no seu ritmo.
+            </p>
+        </section>
+
+        <form id="authForm" class="formulario">
+
+            <div class="campo">
+                <label for="nome">Nome</label>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Seu nome completo"
+                    autocomplete="name"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="email">E-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="seuemail@exemplo.com"
+                    autocomplete="email"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="senha">Senha</label>
+                <input
+                    type="password"
+                    id="senha"
+                    name="senha"
+                    placeholder="Crie uma senha"
+                    minlength="8"
+                    autocomplete="new-password"
+                    required
+                >
+                <small>Use pelo menos 8 caracteres.</small>
+            </div>
+
+            <div class="campo">
+                <label for="confirmarSenha">Confirmar senha</label>
+                <input
+                    type="password"
+                    id="confirmarSenha"
+                    name="confirmarSenha"
+                    placeholder="Digite sua senha novamente"
+                    minlength="8"
+                    autocomplete="new-password"
+                    required
+                >
+            </div>
+
+            <div class="termos">
+                <input
+                    type="checkbox"
+                    id="aceitarTermos"
+                    name="aceitarTermos"
+                    required
+                >
+
+                <label for="aceitarTermos">
+                    Li e aceito os
+                    <a href="#termos">Termos de uso</a>
+                    e a
+                    <a href="#privacidade">Política de privacidade</a>.
+                </label>
+            </div>
+
+            <button type="submit" class="botao-principal">
+                Criar conta
+            </button>
+
+            <p id="authNotice" class="aviso" aria-live="polite"></p>
+
+            <p class="alternativa">
+                Já tem uma conta?
+                <a href="login.html">Entrar</a>
+            </p>
+
+        </form>
+
+    </main>
+<script src="assets/js/login.js"></script>
+</body>
+</html>
