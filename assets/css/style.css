@@ -1,3 +1,4 @@
+@import 'card.css';
 :root {
   --bg-page: #fff;
   --bg-gradil: linear-gradient(104deg, #d9f9e1 10.49%, #b3edbb 60.09%);
@@ -394,8 +395,9 @@ body {
 }
 
 .cards-row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   gap: 2rem;
 }
 
