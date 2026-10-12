@@ -67,38 +67,6 @@ a:focus-visible {
     box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
 }
 
-.marca {
-    display: inline-flex;
-    align-items: center;
-    gap: 13px;
-    color: #14572d;
-    text-decoration: none;
-}
-
-.marca-logo {
-    width: 54px;
-    height: 54px;
-    display: block;
-    object-fit: contain;
-}
-
-.marca-texto {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.25;
-}
-
-.marca-texto strong {
-    font-size: 14px;
-    font-weight: 800;
-}
-
-.marca-texto small {
-    margin-top: 4px;
-    color: #718276;
-    font-size: 10px;
-}
-
 .nav-links {
     display: flex;
     align-items: center;
