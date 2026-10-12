@@ -434,3 +434,209 @@ body {
     height: min(220px, 60vw);
   }
 }
+
+/* ===== POPUP EM ETAPAS ===== */
+.etapa {
+  display: none;
+}
+.etapa.ativa {
+  display: flex;
+}
+.etapa-tempo {
+  min-height: 0;
+  padding: clamp(28px, 6vw, 48px) clamp(20px, 6vw, 40px);
+  background: #C4F5D8;
+}
+.etapa-som {
+  min-height: 0;
+}
+.etapa-tempo .popup-fechar,
+.etapa-som .popup-fechar {
+  top: 10px;
+  right: 14px;
+}
+.titulo-etapa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 700;
+}
+.icone-titulo {
+  width: 26px;
+  height: 26px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: var(--verde-floresta);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.opcoes-tempo {
+  display: flex;
+  justify-content: center;
+  gap: clamp(10px, 4vw, 40px);
+  flex-wrap: wrap;
+  width: 100%;
+  margin: clamp(28px, 6vw, 56px) 0 clamp(20px, 4vw, 28px);
+}
+.opcao-tempo {
+  min-width: 100px;
+  padding: 10px 24px;
+  border: 1px solid var(--verde-floresta);
+  border-radius: 999px;
+  background: white;
+  color: var(--verde-floresta);
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+}
+.opcao-tempo.selecionado {
+  background: var(--verde-floresta);
+  color: white;
+}
+.botao-prosseguir {
+  min-width: 182px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  background: var(--verde-floresta);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.botao-prosseguir:hover {
+  background: var(--verde-profundo-rodape);
+}
+.opcoes-som {
+  display: flex;
+  justify-content: center;
+  gap: clamp(8px, 3vw, 44px);
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 24px 0 22px;
+}
+.opcao-som {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 58px;
+  height: 75px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: #C4F5D8;
+  color: var(--verde-floresta);
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  cursor: pointer;
+}
+.opcao-som svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: var(--verde-floresta);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.opcao-som.selecionado {
+  border-color: var(--verde-floresta);
+  background: #E3F9EC;
+}
+.volume {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: min(100%, 300px);
+  margin-bottom: 22px;
+}
+.icone-volume {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+  fill: var(--verde-floresta);
+  stroke: var(--verde-floresta);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.icone-volume .onda {
+  fill: none;
+}
+.volume input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  background: linear-gradient(to right, var(--verde-medio) var(--preenchimento, 50%), #111 var(--preenchimento, 50%));
+}
+.volume input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border: none;
+  border-radius: 50%;
+  background: var(--verde-medio);
+}
+.volume input[type="range"]::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border: none;
+  border-radius: 50%;
+  background: var(--verde-medio);
+}
+.tempo-restante {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--verde-medio);
+}
+.player-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.logo {
+  height: 40px;
+  width: auto;
+}
+.links {
+  align-items: center;
+}
+.links .botao-inicio {
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: var(--verde-floresta);
+  color: white;
+}
+.links .botao-inicio:hover {
+  background: var(--verde-profundo-rodape);
+  text-decoration: none;
+}
+.popup-voltar {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  border: none;
+  background: none;
+  font-size: 24px;
+  line-height: 1;
+  color: var(--verde-floresta);
+  cursor: pointer;
+}
+.popup-voltar:hover {
+  color: var(--verde-medio);
+}
+.etapa-respiracao .popup-voltar {
+  top: 15px;
+  left: 18px;
+}
