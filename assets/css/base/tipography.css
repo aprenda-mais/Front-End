@@ -49,5 +49,5 @@ font-weight: var(--font-bold);
 line-height: 2.25rem;
 }
 p  { font-size: 1rem;}
-a  { color: var(--text-main); text-decoration: none; }
+a  { font-family: var(--font-main); var(--text-main); text-decoration: none; }
 small { font-size: 0.875rem; }

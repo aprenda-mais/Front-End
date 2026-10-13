@@ -1,4 +1,6 @@
 :root {
+  --green-30: #f3faf4;
+  --green-50: #eaf7ef;
   --green-100: #d9f9e1;
   --green-300: #b3edbb;
   --green-500: #58ae8e;
@@ -8,12 +10,19 @@
   --white: #ffffff;
 
   --bg-card-container: var(--green-100);
-  --bg-gradient: linear-gradient(104deg, var(--green-100) 10.49%, var(--green-300) 60.09%);
+  --bg-gradient: linear-gradient(
+    104deg,
+    var(--green-100) 10.49%,
+    var(--green-300) 60.09%
+  );
 
   --text-main: var(--green-700);
   --text-muted: var(--green-500);
-  --font-main: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-secondary: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-main:
+    "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --font-secondary:
+    "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-regular: 400;
   --font-medium: 500;
   --font-semibold: 600;
@@ -26,9 +35,10 @@
   --radius-lg: 2.5rem;
   --radius-pill: 9999px;
 
-  --radius-learn: 2.5rem 0 0 2.5rem;
-  --radius-top-left: 2.5rem 1rem 1rem 1rem;
-  --radius-top-right: 1rem 2.5rem 1rem 1rem;
-  --radius-bottom-left: 1rem 1rem 1rem 2.5rem;
-  --radius-bottom-right: 1rem 1rem 2.5rem 1rem;
+  --radius-hero: 0 0 var(--radius-lg) var(--radius-lg);
+  --radius-learn: var(--radius-lg) 0 0 var(--radius-lg);
+  --radius-top-left: var(--radius-lg) 1rem 1rem 1rem;
+  --radius-top-right: 1rem var(--radius-lg) 1rem 1rem;
+  --radius-bottom-left: 1rem 1rem 1rem var(--radius-lg);
+  --radius-bottom-right: 1rem 1rem var(--radius-lg) 1rem;
 }

@@ -1,0 +1,39 @@
+
+.learn-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  min-height: 7.75rem;
+  padding: 1.25rem;
+  background-color: var(--white);
+  border: 1px solid var(--green-100);
+  box-shadow: 0 0.5rem 1.125rem rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease;
+}
+
+.learn-card-top-left {
+  border-radius: var(--radius-top-left);
+}
+
+.learn-card-top-center,
+.learn-card-bottom-center {
+  border-radius: 1.2rem;
+}
+
+.learn-card-top-right {
+  border-radius: var(--radius-top-right);
+}
+
+.learn-card-bottom-left {
+  border-radius: var(--radius-bottom-left);
+}
+
+.learn-card-bottom-right {
+  border-radius: var(--radius-bottom-right);
+}
+
+.learn-card:hover {
+  transform: translateY(-2px);
+}

@@ -26,3 +26,16 @@
   height: clamp(0.8rem, 2vw, 1rem);
   aspect-ratio: 1/1;
 }
+
+.category-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--font-main);
+  padding: 0.375rem 0.625rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-main);
+  background: var(--green-50);
+  border-radius: var(--radius-pill);
+}

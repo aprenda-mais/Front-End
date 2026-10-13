@@ -4,9 +4,9 @@
 @import "../layout/header.css";
 @import "../components/hero.css";
 @import "../layout/grid.css";
-
+@import "../components/cards/learn-card.css";
+@import "../components/cards/card-task.css";
 body {
-  font-family: Poppins, Inter, sans-serif;
   line-height: 1.5;
   color: var(--text-main);
   background-color: var(--white);
@@ -16,18 +16,10 @@ body {
 
 
 .section-learn {
-  margin
   margin-bottom: 3.75rem;
-  padding-left: 20%;
+  padding-left: 10%;
 }
 
-.section-title-center {
-  margin-bottom: 1.25rem;
-  font-size: 1rem;
-  font-weight: 700;
-  text-align: left;
-  color: var(--text-main);
-}
 
 .learn-container {
   position: relative;
@@ -47,70 +39,11 @@ body {
   gap: 0.5625rem 0.3125rem;
 }
 
-.learn-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.625rem;
-  min-height: 7.75rem;
-  padding: 1.25rem;
-  background-color: var(--bg-card-white);
-  border: 1px solid #e2e8e2;
-  box-shadow: 0 0.5rem 1.125rem rgba(0, 0, 0, 0.04);
-  transition: transform 0.2s ease;
-}
-
-.learn-card-top-left {
-  border-radius: var(--radius-top-left);
-}
-
-.learn-card-top-center,
-.learn-card-bottom-center {
-  border-radius: var(--radius-sm);
-}
-
-.learn-card-top-right {
-  border-radius: var(--radius-top-right);
-}
-
-.learn-card-bottom-left {
-  border-radius: var(--radius-bottom-left);
-}
-
-.learn-card-bottom-right {
-  border-radius: var(--radius-bottom-right);
-}
-
-.learn-card:hover {
-  transform: translateY(-2px);
-}
-
-.category-badge {
-  display: inline-block;
-  align-self: flex-start;
-  padding: 0.375rem 0.625rem;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  color: var(--text-main);
-  background: #eaf7ef;
-  border-radius: var(--radius-pill);
-}
-
-.learn-card h3 {
-  align-self: stretch;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--text-main);
-  overflow-wrap: anywhere;
-}
-
 .divisor {
   display: inline-block;
   width: 1px;
   height: 13.125rem;
-  background: #58ae8e;
+  background: var(--green-500);
 }
 
 .learn-quote-panel {
@@ -159,17 +92,12 @@ body {
 }
 
 .section-header-left h2 {
-  margin-bottom: 0.375rem;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--text-main);
-}
+  margin-bottom: 0.3rem;
 
+}
 .section-header-left p {
-  font-family: Inter, sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  color: #58ae8e;
+  font-family: var(--font-secondary);
+  color: var(--green-500);
 }
 
 .cards-row {
@@ -297,7 +225,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  padding: clamp(1.5rem, 5vw, 3.5rem) clamp(1.25rem, 5vw, 4rem);
+  padding: 1.5rem 4.5rem;
   background-color: var(--bg-card-container);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -321,30 +249,6 @@ body {
   font-size: 1.05rem;
   color: #2d5b46;
   opacity: 0.82;
-}
-
-.btn-dark {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  gap: 0.9rem;
-  padding: 0.64rem 1.25rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  white-space: nowrap;
-  color: hsl(135, 73%, 91%);
-  text-decoration: none;
-  background-color: var(--accent-dark);
-  border: 1px solid #e2e8e2;
-  border-radius: var(--radius-sm);
-  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s, background-color 0.2s;
-}
-
-.btn-dark:hover {
-  transform: translateY(-2px);
-  background-color: #0b2418;
 }
 
 small {
