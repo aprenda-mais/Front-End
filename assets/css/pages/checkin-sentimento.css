@@ -1,5 +1,5 @@
 /* Importa tudo o que já foi feito na tela anterior */
-@import "checkin_tarefas.css";
+@import "checkin-tarefas.css";
 
 /* Bolinha (marcador circular concêntrico) no canto superior direito */
 .radio-dot {

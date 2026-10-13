@@ -1,4 +1,4 @@
-@import 'style.css';
+@import "../base/style.css";
 /* --- VARIÁVEIS DA PALETA --- */
 :root {
   --bg-page: #F4F8F5;            /* Fundo da tela */

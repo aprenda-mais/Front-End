@@ -1,4 +1,6 @@
-@import 'style.css';
+@import "../base/style.css";
+
+/* CONFIGURAÇÕES GERAIS */
 
 * {
     margin: 0;
@@ -23,30 +25,11 @@ body {
 }
 
 body {
+    min-height: 100vh;
     color: var(--verde-texto);
 }
 
-
-.topo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-
-    display: flex;
-    align-items: center;
-    gap: 7px;
-
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.icone-topo {
-    font-size: 23px;
-}
-
-/* =================================
-   ÁREA PRINCIPAL
-================================= */
+/*principal*/
 
 .container {
     width: 100%;
@@ -58,10 +41,10 @@ body {
     align-items: center;
     justify-content: center;
 
-    padding: 75px 20px 15px;
+    padding: 65px 20px 10px;
 }
 
-/* =================================
+ /*=================================
    INTRODUÇÃO
 ================================= */
 
@@ -95,6 +78,9 @@ body {
     border-radius: 17px;
 }
 
+/* =================================
+   CAMPOS
+================================= */
 
 .campo {
     display: flex;
@@ -139,6 +125,9 @@ body {
     margin-top: -2px;
 }
 
+/* =================================
+   BOTÃO PRINCIPAL
+================================= */
 
 .botao-principal {
     width: 100%;
@@ -211,84 +200,39 @@ body {
     flex-shrink: 0;
 }
 
-
 /* =================================
-   PÁGINA DE CADASTRO
+   PÁGINA DE LOGIN
 ================================= */
 
-.pagina-cadastro {
-    background: var(--verde-claro);
+.pagina-login {
+    background: var(--verde-escuro);
 }
 
-.pagina-cadastro .topo,
-.pagina-cadastro .introducao h1 {
-    color: var(--verde-texto);
+.pagina-login .topo,
+.pagina-login .introducao h1 {
+    color: var(--verde-claro);
 }
 
-.pagina-cadastro .topo {
-    font-size: 16px;
+.pagina-login .introducao {
+    margin-bottom: 18px;
 }
 
-.pagina-cadastro .introducao {
-    margin-bottom: 14px;
+.pagina-login .introducao p {
+    color: #78bba1;
 }
 
-.pagina-cadastro .introducao h1 {
-    font-size: 23px;
+.pagina-login .formulario {
+    max-width: 420px;
+    padding: 24px;
+    gap: 13px;
 }
 
-.pagina-cadastro .introducao p {
-    color: var(--texto-secundario);
-    font-size: 12px;
-    line-height: 1.2;
+.pagina-login .botao-principal {
+    background: var(--verde-escuro);
+    color: var(--verde-claro);
 }
 
-.pagina-cadastro .formulario {
-    width: 100%;
-    max-width: 362px;
-
-    padding: 16px 20px;
-    gap: 9px;
-
-    border-radius: 14px;
-}
-
-.pagina-cadastro .campo {
-    gap: 4px;
-}
-
-.pagina-cadastro .campo label {
-    font-size: 11px;
-}
-
-.pagina-cadastro .campo input {
-    height: 33px;
-    border-radius: 9px;
-    font-size: 11px;
-}
-
-.pagina-cadastro .campo small {
-    font-size: 10px;
-}
-
-.pagina-cadastro .botao-principal {
-    min-height: 35px;
-
-    background: #d8f9e0;
-    color: var(--verde-texto);
-
-    font-size: 12px;
-    margin-top: 1px;
-}
-
-.pagina-cadastro .alternativa {
-    font-size: 11px;
-    margin-top: 3px;
-}
-
-/* =================================
-   CELULARES
-================================= */
+/*CELULARES*/
 
 @media (max-width: 500px) {
     .topo {
@@ -299,6 +243,35 @@ body {
 
     .container {
         padding: 55px 14px 10px;
+    }
+
+    .pagina-login .introducao {
+        margin-bottom: 15px;
+    }
+
+    .pagina-login .introducao h1 {
+        font-size: 25px;
+    }
+
+    .pagina-login .introducao p {
+        font-size: 14px;
+    }
+
+    .pagina-login .formulario {
+        padding: 18px;
+        gap: 10px;
+    }
+
+    .pagina-login .campo {
+        gap: 5px;
+    }
+
+    .pagina-login .campo input {
+        height: 38px;
+    }
+
+    .pagina-login .botao-principal {
+        min-height: 40px;
     }
 
     .pagina-cadastro .introducao {
@@ -334,6 +307,23 @@ body {
     .container {
         padding-top: 48px;
         padding-bottom: 6px;
+    }
+
+    .pagina-login .introducao {
+        margin-bottom: 8px;
+    }
+
+    .pagina-login .formulario {
+        padding: 12px 16px;
+        gap: 7px;
+    }
+
+    .pagina-login .campo input {
+        height: 33px;
+    }
+
+    .pagina-login .botao-principal {
+        min-height: 35px;
     }
 
     .pagina-cadastro .introducao {

@@ -1,4 +1,4 @@
-@import 'style.css';
+@import "../base/style.css";
 
 :root {
   --verde-floresta: #2D5B46;

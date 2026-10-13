@@ -1,0 +1,28 @@
+
+.pill-group {
+  display: inline-flex;
+  gap: clamp(0.4rem, 1.5vw, 0.62rem);
+}
+
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-main);
+  
+  gap: clamp(0.35rem, 1vw, 0.5rem);
+  min-height: clamp(1.75rem, 4vh, 2.125rem);
+  height: auto;
+  padding: clamp(0.4rem, 1.5vw, 0.5rem) clamp(0.65rem, 2vw, 0.875rem);
+  font-size: clamp(0.7rem, 1.5vw, 0.81rem);
+  font-weight: var(--font-semibold);
+  color: var(--text-main);
+  background: #fff;
+  border: 1px solid var(--text-main);
+  border-radius: var(--radius-pill);
+}
+
+.tag-pill svg {
+  width: clamp(0.8rem, 2vw, 1rem);
+  height: clamp(0.8rem, 2vw, 1rem);
+  aspect-ratio: 1/1;
+}

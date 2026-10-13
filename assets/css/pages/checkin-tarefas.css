@@ -1,4 +1,4 @@
-@import 'style.css';
+@import "../base/style.css";
 :root {
   /* Cores extraídas da paleta */
   --bg-page: #F4F8F5;              /* Fundo geral da página */

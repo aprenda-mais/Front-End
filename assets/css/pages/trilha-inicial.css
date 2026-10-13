@@ -1,4 +1,4 @@
-@import "card.css";
+@import "../components/card.css";
 
 /* Apenas ajustes de layout da página e botão continuar */
 body {

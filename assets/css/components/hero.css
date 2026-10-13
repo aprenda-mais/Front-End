@@ -1,0 +1,86 @@
+@import "pill.css";
+@import "button.css";
+.hero-wrapper {
+  margin-bottom: clamp(1.5rem, 5vh, 3.2rem);
+}
+
+.glow-left,
+.glow-right {
+  position: absolute;
+  width: clamp(12rem, 35vw, 22.5rem);
+  height: clamp(12rem, 35vw, 22.5rem);
+  border-radius: 50%;
+  filter: blur(clamp(2rem, 6vw, 3.75rem));
+}
+
+.glow-left {
+  top: clamp(-7.5rem, -12vw, -3rem);
+  left: clamp(-7.5rem, -12vw, -3rem);
+  opacity: 0.2;
+  background: #5ec166;
+}
+
+.glow-right {
+  right: clamp(-7.5rem, -12vw, -3rem);
+  bottom: clamp(-7.5rem, -12vw, -3rem);
+  opacity: 0.1;
+  background: var(--text-main);
+}
+
+.hero-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  align-items: center;
+  gap: clamp(0.75rem, 3vh, 1.5rem);
+  padding: clamp(1.5rem, 6vh, 3.5rem) clamp(1.25rem, 7vw, 4.5rem);
+  background: var(--bg-gradient);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.75rem, 3vh, 1.5rem);
+}
+
+.hero-title {
+  font-family: var(--font-main);
+  font-size: clamp(1.75rem, 7vh, 3.5rem);
+  font-weight: var(--font-bold);
+  line-height: 1.2;
+  color: var(--text-main);
+}
+
+.hero-subtitle {
+  align-self: stretch;
+  font-family: var(--font-main);
+  font-size: clamp(0.95rem, 1.5vw, 1rem);
+  line-height: clamp(1.35rem, 3vh, 1.875rem);
+  color: var(--text-main);
+  opacity: 0.8;
+}
+
+.hero-illustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-illustration img {
+  width: min(100%, clamp(12rem, 32vh, 20.58125rem));
+  height: auto;
+}
+
+@media (max-height: 45rem) {
+  .hero-card {
+    padding-block: clamp(1rem, 4vh, 2rem);
+  }
+
+  .hero-illustration img {
+    max-height: 24vh;
+    width: auto;
+  }
+}

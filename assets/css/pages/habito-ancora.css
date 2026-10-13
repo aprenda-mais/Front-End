@@ -1,5 +1,5 @@
-@import 'style.css';
-@import 'card.css';
+@import "../base/style.css";
+@import "../components/card.css";
 :root {
     /* Paleta de Cores */
     --paleta-2: #2D5B46;       /* Verde escuro principal (títulos, ícones, logótipo) */
