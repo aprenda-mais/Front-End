@@ -4,7 +4,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
 
+:root {
+    --verde-escuro: #285b45;
+    --verde-medio: #438663;
+    --verde-claro: #d9f8e1;
+    --verde-fundo: #f6fbf7;
+    --verde-texto: #315b49;
+    --borda: #e1ebe3;
+    --texto: #263b30;
+    --texto-secundario: #68786d;
+    --branco: #fff;
+    --sombra: 0 4px 12px rgba(45, 92, 73, .055);
+}
+
+[hidden] {
+    display: none !important;
 }
 
 html {
@@ -12,49 +28,62 @@ html {
 }
 
 body {
-    font-family: 'Inter', Arial, sans-serif;
-    background-color: #FFFFFF;
-    color: #075E46;
+    min-height: 100vh;
+    background: var(--verde-fundo);
+    color: var(--texto);
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
 }
 
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
 
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #73bc8a;
+    outline-offset: 3px;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
 .navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  height: 4.375rem;
-  padding: 0.75rem 4.8125rem;
-  background-color: #fff;
-  border-bottom: 1px solid #000;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-}
-
-.navbar img {
-
-width: 4.5rem;
-height: 4.5rem;
+    min-height: 76px;
+    width: 100%;
+    padding: 8px 3.4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: var(--branco);
+    border-bottom: 1px solid #d4ddd6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
 }
 
 .nav-links {
-  display: flex;
-  gap: 1.75rem;
-  list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    list-style: none;
 }
 
 .nav-links a {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--text-muted);
-  text-decoration: none;
-  transition: opacity 0.2s;
+    color: #0d5428;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+    transition: color .2s ease;
 }
 
 .nav-links a:hover {
-  opacity: 0.75;
+    color: var(--verde-medio);
 }
 
 

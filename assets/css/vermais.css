@@ -1,0 +1,804 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS E CABEÇALHO
+========================= */
+
+@import 'style.css'; /*estilo das letras do css do rodrigo*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --verde-escuro: #285b45;
+    --verde-medio: #438663;
+    --verde-claro: #d9f8e1;
+    --verde-fundo: #f6fbf7;
+    --verde-texto: #315b49;
+    --borda: #e1ebe3;
+    --texto: #263b30;
+    --texto-secundario: #68786d;
+    --branco: #fff;
+    --sombra: 0 4px 12px rgba(45, 92, 73, .055);
+}
+
+[hidden] {
+    display: none !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--verde-fundo);
+    color: var(--texto);
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #73bc8a;
+    outline-offset: 3px;
+}
+
+
+.navbar {
+    min-height: 76px;
+    width: 100%;
+    padding: 8px 3.4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: var(--branco);
+    border-bottom: 1px solid #d4ddd6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #0d5428;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+    transition: color .2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--verde-medio);
+}
+
+
+/* =========================
+   BANNER PRINCIPAL
+========================= */
+
+.banner {
+    width: 100%;
+    min-height: 118px;
+    padding: 8px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(
+        105deg,
+        #c9f5d1 0%,
+        #b2edbd 68%,
+        #9fdbac 100%
+    );
+    border-radius: 0 0 17px 17px;
+}
+
+.banner-conteudo {
+    position: relative;
+    z-index: 1;
+}
+
+.banner h1 {
+    color: #315d49;
+    font-size: clamp(25px, 3.3vw, 34px);
+    line-height: 1.25;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 13px;
+}
+
+.categorias span {
+    padding: 4px 8px;
+    border: 1px solid #8bb69a;
+    border-radius: 20px;
+    font-size: 8px;
+    color: #315d49;
+    white-space: nowrap;
+}
+
+.banner-conteudo > p {
+    font-size: 10px;
+    color: #587b65;
+}
+
+
+
+/* =========================
+   TÍTULOS DAS SEÇÕES
+========================= */
+
+main {
+    padding-bottom: 15px;
+}
+
+.secao-habitos,
+.secao-progresso {
+    margin: 22px 21px 0;
+}
+
+.titulo-secao {
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #284f40;
+    margin-bottom: 14px;
+}
+
+
+/* =========================
+   CARDS DE MICRO-HÁBITOS
+========================= */
+
+.grade-habitos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.card-habito {
+    min-width: 0;
+    min-height: 111px;
+    padding: 13px 11px;
+    background: #f3f9f4;
+    border: 1px solid #e5eee6;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px #204d3010;
+}
+
+.card-habito h3 {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 5px 0 8px;
+    color: #315e49;
+}
+
+.card-habito p {
+    font-size: 8px;
+    line-height: 1.6;
+    color: #4e6c5b;
+}
+
+.card-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.categoria-card {
+    display: inline-block;
+    background: #e7f6e9;
+    color: #37684c;
+    font-size: 6px;
+    font-weight: 600;
+    padding: 4px 6px;
+    border-radius: 20px;
+}
+
+.notificacao {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #d52e2e;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 6px;
+    font-weight: 700;
+}
+
+.etiquetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 8px;
+}
+
+.etiquetas span {
+    font-size: 6px;
+    padding: 5px 7px;
+    border-radius: 15px;
+    background: #e8f5eb;
+    color: #355f49;
+    white-space: nowrap;
+}
+
+.etiquetas-texto {
+    gap: 12px;
+    padding-left: 4px;
+}
+
+.etiquetas-texto span {
+    background: transparent;
+    padding: 3px 0;
+    font-weight: 600;
+}
+
+
+/* =========================
+   SEÇÃO DE PROGRESSO
+========================= */
+
+.secao-progresso {
+    margin-top: 24px;
+}
+
+.grade-progresso {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.painel-progresso {
+    min-width: 0;
+    min-height: 98px;
+    position: relative;
+    overflow: hidden;
+    padding: 13px;
+    background: #edf4ef;
+    border: 1px solid #e8f0e9;
+    border-radius: 13px;
+}
+
+.painel-progresso h3 {
+    color: #245541;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.painel-progresso p {
+    color: #617064;
+    font-size: 7px;
+    line-height: 1.6;
+}
+
+.selo {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 3px 6px;
+    border-radius: 20px;
+    background: #d9f6e3;
+    color: #36a876;
+    font-size: 6px;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+.tempo {
+    grid-column: span 3;
+    min-height: 157px;
+}
+
+.bateria {
+    grid-column: span 3;
+    min-height: 157px;
+}
+
+.pequeno {
+    grid-column: span 2;
+    min-height: 98px;
+}
+
+.pequeno h3 {
+    font-size: 12px;
+    margin-top: 13px;
+    margin-bottom: 20px;
+}
+
+.ampulheta {
+    position: absolute;
+    right: 36px;
+    top: 28px;
+    width: 80px;
+    height: 105px;
+}
+
+.ampulheta svg {
+    width: 100%;
+    height: 100%;
+    stroke: #315e4b;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* =========================
+   PRIMEIRO MARCO
+========================= */
+
+.marco {
+    margin: 27px 21px 0;
+    padding: 12px 14px;
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #d9f8e2;
+    border-radius: 13px;
+    box-shadow: 0 4px 10px #204d3008;
+}
+
+.marco-texto {
+    flex: 1;
+}
+
+.marco-texto p {
+    color: #35644c;
+    font-size: clamp(15px, 1.8vw, 18px);
+    font-weight: 400;
+}
+
+.trofeu {
+    flex: 0 0 34%;
+    max-width: 315px;
+    min-width: 190px;
+    height: 315px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #b1edbb;
+    border: 1px solid #6c9475;
+    border-radius: 28px;
+}
+
+.brilho {
+    position: absolute;
+    color: #63bd7d;
+    font-size: 27px;
+}
+
+.brilho-um {
+    top: 27px;
+    left: 39px;
+}
+
+.brilho-dois {
+    top: 27px;
+    right: 30px;
+}
+
+.confete {
+    position: absolute;
+    color: #64bd7d;
+    font-size: 37px;
+    font-weight: 700;
+}
+
+.confete-um {
+    top: 52px;
+    left: 27px;
+    transform: rotate(-15deg);
+}
+
+.confete-dois {
+    top: 62px;
+    right: 27px;
+    transform: rotate(15deg);
+}
+
+.confete-tres {
+    bottom: 87px;
+    left: 47px;
+}
+
+.confete-quatro {
+    bottom: 87px;
+    right: 43px;
+}
+
+.copa {
+    width: 160px;
+    height: 190px;
+    position: relative;
+    margin-top: 25px;
+}
+
+.copa-corpo {
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    left: 29px;
+    width: 102px;
+    height: 112px;
+    background: #62bc7b;
+    border: 4px solid #155e39;
+    border-radius: 10px 10px 48% 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0 0, 100% 0, 92% 53%, 76% 81%, 50% 100%, 24% 81%, 8% 53%);
+}
+
+.copa-corpo::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 9px;
+    right: 13px;
+    height: 5px;
+    border-radius: 10px;
+    background: #a7e7b3;
+}
+
+.copa-corpo span {
+    color: #fff;
+    font-size: 51px;
+    line-height: 1;
+}
+
+.alca {
+    position: absolute;
+    top: 46px;
+    width: 44px;
+    height: 61px;
+    border: 4px solid #155e39;
+    background: #7bd28d;
+    z-index: 1;
+}
+
+.alca-esquerda {
+    left: 3px;
+    border-radius: 12px 0 0 38px;
+    transform: rotate(-6deg);
+}
+
+.alca-direita {
+    right: 3px;
+    border-radius: 0 12px 38px 0;
+    transform: rotate(6deg);
+}
+
+.pe-copa {
+    position: absolute;
+    z-index: 3;
+    left: 67px;
+    top: 137px;
+    width: 27px;
+    height: 28px;
+    background: #62bc7b;
+    border-left: 4px solid #155e39;
+    border-right: 4px solid #155e39;
+}
+
+.base-copa {
+    position: absolute;
+    z-index: 3;
+    left: 45px;
+    top: 160px;
+    width: 70px;
+    height: 22px;
+    background: #62bc7b;
+    border: 4px solid #155e39;
+    border-radius: 13px 13px 0 0;
+}
+
+.base-trofeu {
+    position: absolute;
+    bottom: 14px;
+    width: 188px;
+    height: 31px;
+    background: #65c17e;
+    border-radius: 0 0 50% 50%;
+}
+
+.base-trofeu::before {
+    content: "";
+    position: absolute;
+    width: 114px;
+    height: 20px;
+    left: 37px;
+    top: -10px;
+    background: #104e31;
+    border-radius: 9px 9px 3px 3px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (min-width: 1200px) {
+    .cabecalho {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .secao-habitos,
+    .secao-progresso,
+    .marco {
+        margin-left: 28px;
+        margin-right: 28px;
+    }
+
+    .banner {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .card-habito {
+        padding: 16px;
+    }
+
+    .painel-progresso {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 700px) {
+    .cabecalho {
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    .marca {
+        gap: 7px;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 9px;
+    }
+
+    .marca-texto h2 {
+        font-size: 11px;
+    }
+
+    .marca-texto p {
+        font-size: 7px;
+    }
+
+    .banner {
+        padding: 17px 20px;
+        min-height: 145px;
+    }
+
+    .banner h1 {
+        font-size: 25px;
+    }
+
+    .banner-ilustracao {
+        flex-basis: 120px;
+        width: 120px;
+        margin-right: 0;
+        transform: scale(0.8);
+        transform-origin: bottom right;
+    }
+
+    .categorias {
+        gap: 4px;
+    }
+
+    .categorias span {
+        font-size: 7px;
+        padding: 4px 6px;
+    }
+
+    .secao-habitos,
+    .secao-progresso {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .titulo-secao {
+        font-size: 20px;
+    }
+
+    .grade-habitos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .card-habito {
+        padding: 12px 10px;
+    }
+
+    .card-habito h3 {
+        font-size: 11px;
+    }
+
+    .grade-progresso {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tempo,
+    .bateria {
+        grid-column: span 1;
+        min-height: 145px;
+    }
+
+    .pequeno {
+        grid-column: span 1;
+        min-height: 115px;
+    }
+
+    .painel-progresso {
+        padding: 11px;
+    }
+
+    .painel-progresso h3 {
+        font-size: 13px;
+    }
+
+    .ampulheta {
+        right: 8px;
+        top: 53px;
+        width: 45px;
+        height: 65px;
+        opacity: 0.8;
+    }
+
+    .marco {
+        margin: 22px 15px 0;
+        min-height: 230px;
+        padding: 15px;
+    }
+
+    .marco-texto p {
+        font-size: 14px;
+    }
+
+    .trofeu {
+        flex-basis: 45%;
+        min-width: 130px;
+        max-width: 210px;
+        height: 210px;
+        border-radius: 22px;
+    }
+
+    .copa {
+        transform: scale(0.68);
+        transform-origin: center;
+        margin-top: 15px;
+    }
+
+    .base-trofeu {
+        transform: scale(0.8);
+        bottom: 7px;
+    }
+
+    .brilho-um {
+        left: 12px;
+    }
+
+    .brilho-dois {
+        right: 12px;
+    }
+}
+
+@media (max-width: 420px) {
+    .cabecalho {
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        gap: 13px;
+    }
+
+    .banner {
+        padding-left: 15px;
+        padding-right: 10px;
+    }
+
+    .banner h1 {
+        font-size: 22px;
+    }
+
+    .banner-ilustracao {
+        flex-basis: 95px;
+        margin-left: -15px;
+        transform: scale(0.65);
+        transform-origin: bottom right;
+    }
+
+    .categorias span {
+        font-size: 6px;
+    }
+
+    .grade-habitos {
+        grid-template-columns: 1fr;
+    }
+
+    .card-habito {
+        min-height: 100px;
+    }
+
+    .etiquetas-texto {
+        gap: 10px;
+    }
+
+    .painel-progresso {
+        padding: 9px;
+    }
+
+    .selo {
+        font-size: 5px;
+    }
+
+    .painel-progresso p {
+        font-size: 7px;
+    }
+
+    .marco {
+        gap: 8px;
+        min-height: 190px;
+        padding: 10px;
+    }
+
+    .marco-texto p {
+        font-size: 12px;
+    }
+
+    .trofeu {
+        flex-basis: 48%;
+        min-width: 115px;
+        height: 175px;
+        border-radius: 18px;
+    }
+
+    .copa {
+        transform: scale(0.55);
+    }
+
+    .base-trofeu {
+        transform: scale(0.65);
+        bottom: 3px;
+    }
+}
