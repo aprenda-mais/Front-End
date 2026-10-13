@@ -154,7 +154,7 @@ a:focus-visible {
   border: none;
   border-radius: 20px;
   background: var(--verde-floresta);
-  color: white;
+  color: var(--verde-escuro);
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -187,7 +187,7 @@ a:focus-visible {
   background: var(--verde-floresta);
   padding: clamp(48px, 7vw, 80px) clamp(20px, 5vw, 64px) 80px;
   text-align: center;
-  color: white;
+  color: var(--verde-escuro);
 }
 .habitos h2 {
   font-size: 30px;

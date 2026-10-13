@@ -1,42 +1,37 @@
-const form = document.getElementById("authForm");
-const title = document.getElementById("auth-title");
-const nomeField = document.getElementById("nomeField");
-const nomeInput = document.getElementById("nome");
-const senhaInput = document.getElementById("senha");
-const senhaAjuda = document.getElementById("senhaAjuda");
-const submitButton = document.getElementById("submitButton");
-const notice = document.getElementById("authNotice");
-const tabLogin = document.getElementById("tabLogin");
-const tabCadastro = document.getElementById("tabCadastro");
+const formLogin = document.querySelector("#formLogin");
 
-function setMode(mode) {
-  const cadastro = mode === "cadastro";
+formLogin.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-  title.textContent = cadastro ? "Crie sua conta" : "Que bom ter você por aqui";
-  nomeField.hidden = !cadastro;
-  nomeInput.required = cadastro;
-  senhaInput.autocomplete = cadastro ? "new-password" : "current-password";
-  senhaAjuda.hidden = !cadastro;
-  submitButton.textContent = cadastro ? "Criar conta" : "Entrar";
-  tabLogin.classList.toggle("is-active", !cadastro);
-  tabCadastro.classList.toggle("is-active", cadastro);
-  tabLogin.setAttribute("aria-pressed", String(!cadastro));
-  tabCadastro.setAttribute("aria-pressed", String(cadastro));
-  notice.textContent = "";
-}
+  // 1. Captura as credenciais
+  const email = document.querySelector("#email").value.trim().toLowerCase();
+  const senha = document.querySelector("#senha").value;
 
-tabLogin.addEventListener("click", () => setMode("login"));
-tabCadastro.addEventListener("click", () => setMode("cadastro"));
+  // 2. Busca a lista de contas salvas
+  const usuarios = JSON.parse(localStorage.getItem("usuarios") || "[]");
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
+  // 3. Procura o usuário cadastrado pelo e-mail
+  const usuarioEncontrado = usuarios.find((u) => u.email === email);
 
-  if (!form.reportValidity()) {
+  if (!usuarioEncontrado) {
+    alert("Nenhuma conta encontrada com este e-mail.");
     return;
   }
 
-  notice.textContent =
-    "A tela está pronta, mas o acesso ainda precisa ser conectado ao sistema.";
-});
+  // 4. Valida a senha
+  if (usuarioEncontrado.senha !== senha) {
+    alert("Senha incorreta. Tente novamente.");
+    return;
+  }
 
-setMode(new URLSearchParams(window.location.search).get("modo"));
+  // 5. Ativa a sessão com todos os dados e estatísticas desse usuário
+  localStorage.setItem("usuarioLogado", JSON.stringify(usuarioEncontrado));
+
+  // 6. Redirecionamento inteligente:
+  // Se o usuário já escolheu trilha antes, vai para a tela principal; senão, vai para a trilha
+  if (usuarioEncontrado.trilhaAtiva) {
+    window.location.href = "home.html";
+  } else {
+    window.location.href = "trilha-inicial.html";
+  }
+});
