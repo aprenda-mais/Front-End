@@ -1,64 +1,89 @@
-@font-face {
-  font-family: 'Poppins';
-  src: url('../fonts/Poppins-Medium.ttf') format('truetype');
-  font-weight: 400 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Poppins';
-  src: url('../fonts/Poppins-Bold.ttf') format('truetype');
-  font-weight: 700 800;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter-VariableFont.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-:root {
-  --verde-floresta: #2D5B46;
-  --verde-profundo-rodape: #224A3B;
-  --verde-medio: #58AE8E;
-  --verde-claro: #B3EDBB;
-  --fundo-meditacao: #f1f8f3;
-}
+@import 'style.css';
+/*BASE*/
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-img {
-  display: block;
-  max-width: 100%;
+
+:root {
+    --verde-escuro: #285b45;
+    --verde-medio: #438663;
+    --verde-claro: #d9f8e1;
+    --verde-fundo: #f6fbf7;
+    --verde-texto: #315b49;
+    --borda: #e1ebe3;
+    --texto: #263b30;
+    --texto-secundario: #68786d;
+    --branco: #fff;
+    --sombra: 0 4px 12px rgba(45, 92, 73, .055);
 }
+
+[hidden] {
+    display: none !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
-  background: white;
+    min-height: 100vh;
+    background: var(--verde-fundo);
+    color: var(--texto);
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
 }
-.menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 56px;
-  padding: 8px clamp(16px, 5vw, 40px);
-  font-size: 12px;
-  color: var(--verde-floresta);
-  background: white;
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
 }
-.links {
-  display: flex;
-  gap: 20px;
+
+button {
+    font: inherit;
+    cursor: pointer;
 }
-.links a {
-  color: var(--verde-floresta);
-  text-decoration: none;
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #73bc8a;
+    outline-offset: 3px;
 }
-.links a:hover {
-  text-decoration: underline;
+
+/* =========================
+   CABEÇALHO
+========================= */
+.navbar {
+    min-height: 76px;
+    width: 100%;
+    padding: 8px 3.4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: var(--branco);
+    border-bottom: 1px solid #d4ddd6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #0d5428;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+    transition: color .2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--verde-medio);
 }
 .topo {
   display: flex;
