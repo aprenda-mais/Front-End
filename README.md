@@ -24,6 +24,8 @@ Entre as opções disponíveis, você pode:
 
 A proposta é começar com pequenas ações, criando micro-hábitos de forma gradual e sem pressão.
 
+<a href="doc/Dossie_Aprenda+.pdf"><strong>📄 Abrir o dossiê em PDF</strong></a>
+
 ## 💻 Tecnologias
 
 O projeto foi desenvolvido utilizando:
