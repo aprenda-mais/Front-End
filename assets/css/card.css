@@ -1,32 +1,4 @@
-
-/* --- TIPOGRAFIA --- */
-@font-face {
-  font-family: "Inter";
-  font-weight: 100 900;
-  font-style: normal;
-  src: url("../fonts/Inter-VariableFont.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-weight: 100 900;
-  font-style: italic;
-  src: url("../fonts/Inter-Italic-VariableFont.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Poppins";
-  font-weight: 500;
-  font-style: normal;
-  src: url("../fonts/Poppins-Medium.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Poppins";
-  font-weight: 700;
-  font-style: normal;
-  src: url("../fonts/Poppins-Bold.ttf") format("truetype");
-}
+@import 'style.css';
 *{
 font-family: Poppins, Inter, sans-serif;
     padding: 0px;
@@ -38,7 +10,6 @@ body{
     flex-direction: column;
     background-color: black;
 
-    padding: 10px;
 }
 .task-card{
     display: flex;
