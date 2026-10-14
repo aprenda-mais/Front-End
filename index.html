@@ -9,14 +9,28 @@
   <body>
     <!-- BARRA DE NAVEGAÇÃO -->
     <header class="navbar">
-      <a href="#inicio">
-      <img src="assets/img/logo.svg" alt="Aprenda+" width="85" height="85" /> 
-    </a>
-      <nav>
+      <a href="#inicio" aria-label="Ir para o início">
+        <img src="assets/img/logo.svg" alt="Aprenda+" width="85" height="85" />
+      </a>
+
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav"
+        aria-label="Abrir menu de navegação"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="nav" aria-label="Navegação principal">
         <ul class="nav-links">
           <li><a href="#inicio">Início</a></li>
           <li><a href="#contato">Contato</a></li>
-          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="sobre.html">Sobre nós</a></li>
           <li><a href="login.html">Entrar</a></li>
         </ul>
       </nav>
@@ -386,5 +400,6 @@
         </div>
       </section>
     </main>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

@@ -9,34 +9,36 @@ const notice = document.getElementById("authNotice");
 const tabLogin = document.getElementById("tabLogin");
 const tabCadastro = document.getElementById("tabCadastro");
 
-function setMode(mode) {
-  const cadastro = mode === "cadastro";
+if (form && title && nomeField && nomeInput && senhaInput && senhaAjuda && submitButton && notice && tabLogin && tabCadastro) {
+  function setMode(mode) {
+    const cadastro = mode === "cadastro";
 
-  title.textContent = cadastro ? "Crie sua conta" : "Que bom ter você por aqui";
-  nomeField.hidden = !cadastro;
-  nomeInput.required = cadastro;
-  senhaInput.autocomplete = cadastro ? "new-password" : "current-password";
-  senhaAjuda.hidden = !cadastro;
-  submitButton.textContent = cadastro ? "Criar conta" : "Entrar";
-  tabLogin.classList.toggle("is-active", !cadastro);
-  tabCadastro.classList.toggle("is-active", cadastro);
-  tabLogin.setAttribute("aria-pressed", String(!cadastro));
-  tabCadastro.setAttribute("aria-pressed", String(cadastro));
-  notice.textContent = "";
-}
-
-tabLogin.addEventListener("click", () => setMode("login"));
-tabCadastro.addEventListener("click", () => setMode("cadastro"));
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  if (!form.reportValidity()) {
-    return;
+    title.textContent = cadastro ? "Crie sua conta" : "Que bom ter você por aqui";
+    nomeField.hidden = !cadastro;
+    nomeInput.required = cadastro;
+    senhaInput.autocomplete = cadastro ? "new-password" : "current-password";
+    senhaAjuda.hidden = !cadastro;
+    submitButton.textContent = cadastro ? "Criar conta" : "Entrar";
+    tabLogin.classList.toggle("is-active", !cadastro);
+    tabCadastro.classList.toggle("is-active", cadastro);
+    tabLogin.setAttribute("aria-pressed", String(!cadastro));
+    tabCadastro.setAttribute("aria-pressed", String(cadastro));
+    notice.textContent = "";
   }
 
-  notice.textContent =
-    "A tela está pronta, mas o acesso ainda precisa ser conectado ao sistema.";
-});
+  tabLogin.addEventListener("click", () => setMode("login"));
+  tabCadastro.addEventListener("click", () => setMode("cadastro"));
 
-setMode(new URLSearchParams(window.location.search).get("modo"));
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!form.reportValidity()) {
+      return;
+    }
+
+    notice.textContent =
+      "A tela está pronta, mas o acesso ainda precisa ser conectado ao sistema.";
+  });
+
+  setMode(new URLSearchParams(window.location.search).get("modo"));
+}
