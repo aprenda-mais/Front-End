@@ -5,29 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
-    <link rel="stylesheet" href="../assets/css/base/variables.css">
     <link rel="stylesheet" href="../assets/css/pages/cadastro.css">
 </head>
 
 <body class="pagina-cadastro">
 
-    <header class="topo">
-        <span class="icone-topo">♧</span>
-        <span>Cadastro</span>
+    <header class="top">
+        <span class="icone-topo"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M2 21.0004C1.99992 19.4608 2.44413 17.9538 3.27935 16.6603C4.11456 15.3669 5.30527 14.3419 6.7086 13.7085C8.11193 13.075 9.66824 12.8599 11.1908 13.0891C12.7133 13.3183 14.1373 13.9819 15.292 15.0004" stroke="#2D5B46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10 13C12.7614 13 15 10.7614 15 8C15 5.23858 12.7614 3 10 3C7.23858 3 5 5.23858 5 8C5 10.7614 7.23858 13 10 13Z" stroke="#2D5B46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M19 16V22" stroke="#2D5B46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M22 19H16" stroke="#2D5B46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>Cadastro</span>
     </header>
 
-    <main class="container">
-
+    <main class="container-form">
+    <div>
         <section class="introducao">
-            <h1>Crie sua conta</h1>
-            <p>
+            <h1 class="title-form">Crie sua conta</h1>
+            <p class="subtitle">
                 Pequenos hábitos, mais cuidado com você.<br>
                 Comece no seu ritmo.
             </p>
         </section>
 
         <form id="authForm" class="formulario">
-
+            <div class="fields">
             <div class="campo">
                 <label for="nome">Nome</label>
                 <input
@@ -78,6 +81,7 @@
                     required
                 >
             </div>
+            </div>
 
             <div class="termos">
                 <input
@@ -95,11 +99,10 @@
                 </label>
             </div>
 
-            <button type="submit" class="botao-principal" onclick="window.location.href='pages/habito_ancora.html'">
+            <button type="submit" class="btn-task btn-principal" >
                 Criar conta
             </button>
 
-            <p id="authNotice" class="aviso" aria-live="polite"></p>
 
             <p class="alternativa">
                 Já tem uma conta?
@@ -107,6 +110,7 @@
             </p>
 
         </form>
+        </div>
 
     </main>
 <script src="assets/js/login.js"></script>

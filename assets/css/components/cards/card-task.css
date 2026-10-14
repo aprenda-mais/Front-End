@@ -1,3 +1,4 @@
+@import "../button.css";
 .task-card{
 display: flex;
 flex-direction: column;
@@ -64,30 +65,6 @@ font-weight: 700;
 line-height: normal;
 text-decoration: none;
 cursor: pointer;
-}
-.btn-task{
-display: flex;
-width: 8.75rem;
-height: 2.625rem;
-padding: 0.625rem;
-justify-content: center;
-align-items: center;
-gap: 0.9375rem;
-border-radius: 0.9375rem;
-border: 1px solid #E2E8E2;
-background: #D9F9E1;
-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-color: #2D5B46;
-font-size: 0.8125rem;
-font-style: normal;
-font-weight: 800;
-line-height: normal;
-text-decoration: none;
-}
-.btn-task svg{
-    width: 1.5rem;
-height: 1.5rem;
-flex-shrink: 0;
 }
 .task-description{
     color: #224A3B;
