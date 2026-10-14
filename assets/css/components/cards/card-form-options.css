@@ -1,0 +1,62 @@
+.card-option {
+  width: 17.2rem;
+  height: 9.5rem;
+  padding: 16px;
+  background: var(--white);
+  border-radius: var(--radius-md);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+.icon-card{
+  width: 2.375rem;
+height: 2.375rem;
+padding: 0.4rem;
+display: flex;
+aspect-ratio: 1/1;
+background-color: var(--green-700);
+color: var(--green-100);
+align-items: center;
+align-content: center;
+justify-content: center;
+border-radius: 100%;
+}
+.icon-card svg{
+  width: 1.5rem;
+height: 1.5rem;
+}
+input[type="radio"]:checked + .card-option {
+background: var(--green-700);
+}
+input[type="radio"]:checked + .card-option h3 {
+color: var(--green-100);
+}
+input[type="radio"]:checked +.card-option .icon-card {
+background: var(--green-100);
+color: var(--green-700);
+}
+.container-form:has(input[type="radio"]:checked)
+    + .footer
+    .btn-form-card {
+    opacity: 1;
+    .btn-form-card:hover{
+      background-color: var(--green-700);
+      color: var(--green-100);
+    }
+}
+.container-form:has(input[type="radio"]:checked)
+    + .footer
+    .btn-form-card:hover{
+      background-color: var(--green-700);
+      color: var(--green-100);
+    }
+input[type="radio"] {
+    display: contents;
+}

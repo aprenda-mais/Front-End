@@ -8,3 +8,10 @@
   padding-left: clamp(1rem, 4vw, 1.5rem);
   padding-right: clamp(1rem, 4vw, 1.5rem);
 }
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2.94rem;
+  grid-template-rows: repeat(2,1fr);
+}
