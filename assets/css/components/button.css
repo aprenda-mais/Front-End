@@ -9,7 +9,7 @@
   font-size: clamp(0.7rem, 1.5vw, 0.8rem);
   font-weight: var(--font-bold);
   color: var(--text-main);
-  background: #fff;
+  background: var(--white);
   border: 1px solid var(--gren-100);
   border-radius: var(--radius-md);
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.15);
@@ -58,16 +58,15 @@ padding: 0.625rem;
 justify-content: center;
 align-items: center;
 gap: 0.9375rem;
-border-radius: 0.9375rem;
-border: 1px solid #E2E8E2;
-background: #D9F9E1;
+border-radius: var(--radius-md);
+border: 1px solid var(--green-50);
+background: var(--green-100);
 box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-color: #2D5B46;
+color: var(--green-700);
 font-size: 0.8125rem;
 font-style: normal;
-font-weight: 800;
+font-weight: var(--font-bold);
 line-height: normal;
-text-decoration: none;
 }
 .btn-task svg{
     width: 1.5rem;
@@ -76,8 +75,11 @@ flex-shrink: 0;
 }
 .btn-principal {
     width: 100%;
-    min-height: 49px;
+    font-size: 1rem;
+    min-height: 3.375rem;
     transition: opacity 0.2s, transform 0.2s;
+    justify-content: center;
+    font-weight: var(--font-bold);
 }
 
 .btn-principal:hover {

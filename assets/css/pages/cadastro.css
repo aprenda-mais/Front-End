@@ -4,13 +4,6 @@
 @import"../layout/form.css";
 @import"../components/cards/card-form.css";
 
-:root {
-    --verde-escuro: #2d5c49;
-    --verde-claro: #b0efb9;
-    --verde-texto: #315b49;
-    --borda: #d8e3da;
-    --texto-secundario: #56675c;
-}
 
 body {
     background-color: var(--green-300);
@@ -24,12 +17,12 @@ body {
 .alternativa {
     text-align: center;
     font-size: 13px;
-    color: var(--texto-secundario);
+    color: var(--text-main);
 }
 
 .alternativa a,
 .termos a {
-    color: var(--verde-texto);
+    color: var(--text-main);
     font-weight: bold;
     text-decoration: underline;
 }
@@ -55,12 +48,12 @@ body {
 
     font-size: 11px;
     line-height: 1.5;
-    color: var(--texto-secundario);
+    color: var(--green-900);
 }
 
 .termos input {
     margin-top: 3px;
-    accent-color: var(--verde-escuro);
+    accent-color: var(--green-700);
     flex-shrink: 0;
 }
 

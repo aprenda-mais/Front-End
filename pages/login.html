@@ -5,24 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
-    <link rel="stylesheet" href="../assets/css/base/variables.css">
     <link rel="stylesheet" href="../assets/css/pages/login.css">
     <script src="script.js" defer></script>
 </head>
 
-<body class="pagina-login">
-    <header class="topo">
-        <span class="icone-topo">♙</span>
-        <span>Login</span>
+<body>
+    <header class="top">
+        <span class="icone-top login">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M10 15H6C4.93913 15 3.92172 15.4214 3.17157 16.1716C2.42143 16.9217 2 17.9391 2 19V21" stroke="#B3EDBB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M22 17.4991C22 19.9981 20.25 21.2481 18.17 21.9731C18.0611 22.01 17.9428 22.0082 17.835 21.9681C15.75 21.2481 14 19.9981 14 17.4981V13.9991C14.0003 13.8666 14.0531 13.7397 14.1468 13.6462C14.2405 13.5526 14.3676 13.5001 14.5 13.5001C15.5 13.5001 16.75 12.9001 17.62 12.1401C17.7271 12.0522 17.8613 12.0041 17.9998 12.0039C18.1384 12.0037 18.2727 12.0515 18.38 12.1391C19.255 12.9041 20.5 13.4991 21.5 13.4991C21.6326 13.4991 21.7598 13.5518 21.8536 13.6455C21.9473 13.7393 22 13.8665 22 13.9991V17.4991Z" stroke="#B3EDBB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="#B3EDBB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        Login
+        </span>
     </header>
 
-    <main class="container">
-
+    <main class="container-form">
         <section class="introducao">
-            <h1>Entre na sua conta</h1>
-            <p>Continue sua jornada</p>
+            <h1 class="title-form login">Entre na sua conta</h1>
+            <p class="subtitle-form login-subtitle">Continue sua jornada</p>
         </section>
-
+        
         <form id="authForm" class="formulario">
 
             <div class="campo">
@@ -49,11 +53,10 @@
                 >
             </div>
 
-            <button type="submit" class="botao-principal" onclick="window.location.href='home.html'">
+            <button type="submit" class="btn-dark btn-principal login">
                 Entrar
             </button>
 
-            <p id="authNotice" class="aviso" aria-live="polite"></p>
 
             <p class="alternativa">
                 Não tem uma conta?

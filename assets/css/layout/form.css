@@ -12,6 +12,7 @@
 .container-form {
     min-height: 100dvh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -28,7 +29,7 @@
     font-family: var(--font-main);
     font-size: 2.25rem;
     line-height: 1.2;
-    margin-bottom: 5px;
+    margin-bottom: 0.75rem;
 }
 
 .introducao .subtitle {
