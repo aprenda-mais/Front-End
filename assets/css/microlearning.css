@@ -1,0 +1,193 @@
+@import 'style.css';
+/* --- VARIÁVEIS DA PALETA --- */
+:root {
+  --bg-page: #F4F8F5;            /* Fundo da tela */
+  --color-title: #133826;         /* Título principal e texto do botão */
+  --color-secondary: #2D4A3E;     /* Textos secundários, subtítulo e categorias */
+  --color-card-bg: #FFFFFF;       /* Fundo do card de reflexão */
+  --color-btn-bg: #EDF3F0;        /* Fundo do botão Continuar */
+  
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --card-radius: 1.5rem;          /* 24px */
+  --card-shadow: 0 12px 30px -4px rgba(19, 56, 38, 0.05), 0 4px 12px -2px rgba(19, 56, 38, 0.03);
+}
+
+/* --- RESET & ESTRUTURA GERAL --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-page);
+  color: var(--color-title);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 60px;
+}
+
+/* --- CABEÇALHO / BADGE SUPERIOR --- */
+.header-top {
+  display: flex;
+  align-items: center;
+}
+
+.learning-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-secondary);
+}
+
+.learning-badge svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--color-secondary);
+}
+
+/* --- CONTEÚDO PRINCIPAL CENTRALIZADO --- */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  max-width: 820px;
+  text-align: center;
+}
+
+.intro-group {
+  margin-bottom: 64px;
+}
+
+.page-title {
+  font-family: var(--font-heading);
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--color-title);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.page-subtitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-secondary);
+  opacity: 0.85;
+}
+
+/* --- CARD DE MICRO-CONCEITO --- */
+.quote-card {
+  background-color: var(--color-card-bg);
+  border-radius: var(--card-radius);
+  padding: 56px 48px;
+  width: 100%;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.quote-category {
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+.quote-text {
+  font-family: var(--font-body);
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--color-title);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.quote-meta {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-secondary);
+  opacity: 0.8;
+}
+
+/* --- RODAPÉ & BOTÃO CONTINUAR --- */
+.footer-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.btn-continuar {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--color-btn-bg);
+  color: var(--color-title);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 16px;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-continuar svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--color-title);
+  transition: transform 0.2s ease;
+}
+
+.btn-continuar:hover {
+  background-color: #dbe7df;
+}
+
+.btn-continuar:hover svg {
+  transform: translateX(3px);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+  body {
+    padding: 24px 20px;
+  }
+  .page-title {
+    font-size: 2rem;
+  }
+  .page-subtitle {
+    font-size: 0.95rem;
+  }
+  .quote-card {
+    padding: 36px 24px;
+    gap: 18px;
+  }
+  .quote-text {
+    font-size: 1.15rem;
+  }
+  .footer-bar {
+    justify-content: stretch;
+  }
+  .btn-continuar {
+    width: 100%;
+    justify-content: center;
+  }
+}

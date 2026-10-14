@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check-in: Bateria - Ritmo de Hoje</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
+  <link rel="stylesheet" href="../assets/css/bateria.css">
+</head>
+<body>
+
+  <!-- Topo -->
+  <header class="header-top">
+    <div class="brand-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#2D4A3E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="7" width="16" height="10" rx="2" ry="2"></rect>
+        <line x1="22" y1="11" x2="22" y2="13"></line>
+        <line x1="6" y1="11" x2="6" y2="13"></line>
+        <line x1="10" y1="11" x2="10" y2="13"></line>
+      </svg>
+      <span>ritmo de hoje</span>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="main-container">
+    <div class="title-group">
+      <h1 class="page-title">Como está sua bateria hoje?</h1>
+      <p class="page-subtitle">Adaptamos o peso do dia ao que você tem de energia real.</p>
+    </div>
+
+    <form class="battery-grid">
+      <!-- 1. Ritmo Normal -->
+      <label class="battery-item" for="ritmo-normal">
+        <input type="radio" id="ritmo-normal" name="bateria" value="normal" class="battery-input">
+        <div class="battery-card">
+          <div class="icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="6" width="17" height="12" rx="2"></rect>
+              <line x1="22" y1="10" x2="22" y2="14"></line>
+              <line x1="6" y1="10" x2="6" y2="14"></line>
+              <line x1="10" y1="10" x2="10" y2="14"></line>
+              <line x1="14" y1="10" x2="14" y2="14"></line>
+            </svg>
+          </div>
+          <h3>Ritmo Normal</h3>
+          <p>Disposição para seguir as micro-ações padrão de 2 minutos.</p>
+        </div>
+      </label>
+
+      <!-- 2. Bateria Fraca (Selecionado por padrão) -->
+      <label class="battery-item" for="bateria-fraca">
+        <input type="radio" id="bateria-fraca" name="bateria" value="fraca" class="battery-input" checked>
+        <div class="battery-card">
+          <div class="icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="6" width="17" height="12" rx="2"></rect>
+              <line x1="22" y1="10" x2="22" y2="14"></line>
+              <line x1="6" y1="10" x2="6" y2="14"></line>
+            </svg>
+          </div>
+          <h3>Bateria Fraca</h3>
+          <p>Modo acolhimento. Pausas mínimas de 1 minuto, sem qualquer cobrança.</p>
+        </div>
+      </label>
+
+      <!-- 3. Apenas Respirar -->
+      <label class="battery-item" for="apenas-respirar">
+        <input type="radio" id="apenas-respirar" name="bateria" value="respirar" class="battery-input">
+        <div class="battery-card">
+          <div class="icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+            </svg>
+          </div>
+          <h3>Apenas Respirar</h3>
+          <p>Energia zero. Apenas registre presença e descanse.</p>
+        </div>
+      </label>
+    </form>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer-bar">
+    <button type="button" class="btn-continuar" onclick="window.location.href='microlearning.html'">
+
+    Continuar
+
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </button>
+  </footer>
+
+</body>
+</html>

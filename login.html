@@ -1,85 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Entre ou crie sua conta no Aprende+."
-    />
-    <title>Entrar | Aprende+</title>
-    <link rel="stylesheet" href="assets/css/login.css" />
-  </head>
-  <body>
-    <main class="auth-page">
-      <a class="auth-back" href="index.html">← Voltar para o início</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <script src="script.js" defer></script>
+</head>
 
-      <section class="auth-card" aria-labelledby="auth-title">
-        <a class="auth-brand" href="index.html" aria-label="Aprende+, início">
-          <img src="assets/img/logo.svg" alt="" width="56" height="56" />
-          <span>Aprende<span class="brand-plus">+</span></span>
-        </a>
+<body class="pagina-login">
+/*arrumar*/
+    <header class="topo">
+        <span class="icone-topo">♙</span>
+        <span>Login</span>
+    </header>
 
-        <h1 id="auth-title">Que bom ter você por aqui</h1>
-        <p class="auth-intro">Entre na sua conta ou crie uma para começar.</p>
+    <main class="container">
 
-        <div class="auth-tabs" role="group" aria-label="Escolha uma opção">
-          <button class="auth-tab is-active" id="tabLogin" type="button" aria-pressed="true">
-            Entrar
-          </button>
-          <button class="auth-tab" id="tabCadastro" type="button" aria-pressed="false">
-            Criar conta
-          </button>
-        </div>
+        <section class="introducao">
+            <h1>Entre na sua conta</h1>
+            <p>Continue sua jornada</p>
+        </section>
 
-        <form class="auth-form" id="authForm">
-          <div class="form-field" id="nomeField" hidden>
-            <label for="nome">Como podemos te chamar?</label>
-            <input
-              id="nome"
-              name="nome"
-              type="text"
-              autocomplete="name"
-              placeholder="Seu nome"
-              minlength="2"
-            />
-          </div>
+        <form id="authForm" class="formulario">
 
-          <div class="form-field">
-            <label for="email">E-mail</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              autocomplete="email"
-              placeholder="voce@exemplo.com"
-              required
-            />
-          </div>
+            <div class="campo">
+                <label for="email">E-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="seuemail@exemplo.com"
+                    autocomplete="email"
+                    required
+                >
+            </div>
 
-          <div class="form-field">
-            <label for="senha">Senha</label>
-            <input
-              id="senha"
-              name="senha"
-              type="password"
-              autocomplete="current-password"
-              placeholder="Sua senha"
-              minlength="8"
-              required
-            />
-            <small id="senhaAjuda" hidden>Use pelo menos 8 caracteres.</small>
-          </div>
+            <div class="campo">
+                <label for="senha">Senha</label>
+                <input
+                    type="password"
+                    id="senha"
+                    name="senha"
+                    placeholder="Sua senha"
+                    autocomplete="current-password"
+                    required
+                >
+            </div>
 
-          <button class="auth-submit" id="submitButton" type="submit">Entrar</button>
-          <p class="auth-notice" id="authNotice" role="status" aria-live="polite"></p>
+            <button type="submit" class="botao-principal" onclick="window.location.href='home.html'">
+                Entrar
+            </button>
+
+            <p id="authNotice" class="aviso" aria-live="polite"></p>
+
+            <p class="alternativa">
+                Não tem uma conta?
+                <a href="cadastro.html">Cadastre-se</a>
+            </p>
+
         </form>
 
-        <p class="auth-note">
-          Um passo de cada vez. Seu espaço para aprender e cuidar de você.
-        </p>
-      </section>
     </main>
-    <script src="assets/js/login.js"></script>
-  </body>
+
+</body>
 </html>

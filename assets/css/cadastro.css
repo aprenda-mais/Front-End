@@ -1,0 +1,371 @@
+@import 'style.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --verde-escuro: #2d5c49;
+    --verde-claro: #b0efb9;
+    --verde-texto: #315b49;
+    --borda: #d8e3da;
+    --texto-secundario: #56675c;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    color: var(--verde-texto);
+}
+
+
+.topo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.icone-topo {
+    font-size: 23px;
+}
+
+/* =================================
+   ÁREA PRINCIPAL
+================================= */
+
+.container {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 75px 20px 15px;
+}
+
+/* =================================
+   INTRODUÇÃO
+================================= */
+
+.introducao {
+    text-align: center;
+}
+
+.introducao h1 {
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+.introducao p {
+    font-size: 17px;
+    line-height: 1.35;
+}
+
+/* =================================
+   FORMULÁRIO
+================================= */
+
+.formulario {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #fff;
+    border-radius: 17px;
+}
+
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.campo input {
+    width: 100%;
+    height: 47px;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+
+    background: #fff;
+    color: #333;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    outline: none;
+}
+
+.campo input:focus {
+    border-color: var(--verde-escuro);
+}
+
+.campo input::placeholder {
+    color: #849087;
+}
+
+.campo small {
+    font-size: 11px;
+    color: #68766c;
+    margin-top: -2px;
+}
+
+
+.botao-principal {
+    width: 100%;
+    min-height: 49px;
+
+    border: none;
+    border-radius: 13px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 3px 4px #00000030;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.botao-principal:hover {
+    opacity: 0.9;
+}
+
+.botao-principal:active {
+    transform: scale(0.99);
+}
+
+/* =================================
+   ALTERNATIVA DE ACESSO
+================================= */
+
+.alternativa {
+    text-align: center;
+    font-size: 13px;
+    color: var(--texto-secundario);
+}
+
+.alternativa a,
+.termos a {
+    color: var(--verde-texto);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* =================================
+   AVISOS
+================================= */
+
+.aviso {
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* =================================
+   TERMOS DE USO
+================================= */
+
+.termos {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--texto-secundario);
+}
+
+.termos input {
+    margin-top: 3px;
+    accent-color: var(--verde-escuro);
+    flex-shrink: 0;
+}
+
+
+/* =================================
+   PÁGINA DE CADASTRO
+================================= */
+
+.pagina-cadastro {
+    background: var(--verde-claro);
+}
+
+.pagina-cadastro .topo,
+.pagina-cadastro .introducao h1 {
+    color: var(--verde-texto);
+}
+
+.pagina-cadastro .topo {
+    font-size: 16px;
+}
+
+.pagina-cadastro .introducao {
+    margin-bottom: 14px;
+}
+
+.pagina-cadastro .introducao h1 {
+    font-size: 23px;
+}
+
+.pagina-cadastro .introducao p {
+    color: var(--texto-secundario);
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.pagina-cadastro .formulario {
+    width: 100%;
+    max-width: 362px;
+
+    padding: 16px 20px;
+    gap: 9px;
+
+    border-radius: 14px;
+}
+
+.pagina-cadastro .campo {
+    gap: 4px;
+}
+
+.pagina-cadastro .campo label {
+    font-size: 11px;
+}
+
+.pagina-cadastro .campo input {
+    height: 33px;
+    border-radius: 9px;
+    font-size: 11px;
+}
+
+.pagina-cadastro .campo small {
+    font-size: 10px;
+}
+
+.pagina-cadastro .botao-principal {
+    min-height: 35px;
+
+    background: #d8f9e0;
+    color: var(--verde-texto);
+
+    font-size: 12px;
+    margin-top: 1px;
+}
+
+.pagina-cadastro .alternativa {
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+/* =================================
+   CELULARES
+================================= */
+
+@media (max-width: 500px) {
+    .topo {
+        top: 14px;
+        left: 16px;
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 55px 14px 10px;
+    }
+
+    .pagina-cadastro .introducao {
+        margin-bottom: 10px;
+    }
+
+    .pagina-cadastro .formulario {
+        padding: 12px 16px;
+        gap: 7px;
+    }
+
+    .pagina-cadastro .campo input {
+        height: 31px;
+        padding: 0 10px;
+    }
+
+    .pagina-cadastro .termos {
+        gap: 7px;
+        font-size: 10px;
+        line-height: 1.3;
+    }
+
+    .pagina-cadastro .botao-principal {
+        min-height: 33px;
+    }
+}
+
+/* =================================
+   TELAS COM POUCA ALTURA
+================================= */
+
+@media (max-height: 650px) {
+    .container {
+        padding-top: 48px;
+        padding-bottom: 6px;
+    }
+
+    .pagina-cadastro .introducao {
+        margin-bottom: 7px;
+    }
+
+    .pagina-cadastro .introducao h1 {
+        font-size: 20px;
+    }
+
+    .pagina-cadastro .introducao p {
+        font-size: 11px;
+    }
+
+    .pagina-cadastro .formulario {
+        padding: 8px 14px;
+        gap: 5px;
+    }
+
+    .pagina-cadastro .campo input {
+        height: 28px;
+    }
+
+    .pagina-cadastro .campo label {
+        font-size: 10px;
+    }
+
+    .pagina-cadastro .campo small {
+        font-size: 9px;
+    }
+
+    .pagina-cadastro .botao-principal {
+        min-height: 30px;
+    }
+}

@@ -1,3 +1,4 @@
+@import 'card.css';
 :root {
   --bg-page: #fff;
   --bg-gradil: linear-gradient(104deg, #d9f9e1 10.49%, #b3edbb 60.09%);
@@ -289,7 +290,7 @@ body {
 /* --- SEÇÃO: APRENDER E FAZER --- */
 .section-learn {
   margin-bottom: 3.75rem;
-  padding: 0 clamp(1rem, 5vw, 4rem);
+  padding-left: 20%;
 }
 
 .section-title-center {
@@ -400,13 +401,19 @@ body {
 }
 
 .plants-graphic {
+  position: absolute;
+  bottom: 0;               /* Fixa na base do .learn-container */
   display: flex;
   justify-content: center;
   align-items: flex-end;
   width: 8.10613rem;
   height: 8.10613rem;
-  transform: translateY(20%);
+  pointer-events: none;    /* Evita bloquear cliques em elementos abaixo */
+  
+  /* Se você quiser que ela vaze parcialmente para fora do container cortando na borda: */
+  transform: translateY(0%); 
 }
+
 
 .plants-graphic img {
   width: 8.75rem;
@@ -438,8 +445,9 @@ body {
 }
 
 .cards-row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -986,7 +994,21 @@ small {
   .navbar {
     padding-inline: 1.5rem;
   }
-
+  .learn-card-top-center{
+    border-radius: var(--radius-top-right) !important;
+  }
+  .learn-card-top-left{
+    border-radius: var(--radius-top-left) !important;
+  }
+  .learn-card-bottom-center{
+    border-radius: var(--radius-bottom-left) !important;
+  }
+  .learn-card-bottom-right{
+    border-radius: var(--radius-bottom-right) !important;
+  }
+  [class*="learn-card-"]{
+    border-radius: var(--radius-sm);
+  }
   .hero-card {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -1027,9 +1049,22 @@ small {
   .cta-card {
     flex-wrap: wrap;
   }
+  .quote-text {
+  margin-bottom: 8.5rem;
+}
+
 }
 
 @media (max-width: 36.25rem) {
+    [class*="learn-card-"]{
+    border-radius: var(--radius-sm) !important; 
+  }
+  .learn-card-top-left{
+    border-radius: 40px 40px 20px 20px !important;
+  }
+  .learn-card-bottom-right{
+    border-radius: 20px 20px 40px 40px !important;
+  }
   .navbar {
     position: relative;
     height: auto;
