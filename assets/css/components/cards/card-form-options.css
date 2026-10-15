@@ -1,7 +1,5 @@
 .card-option {
-  width: 17.2rem;
-  height: 9.5rem;
-  padding: 16px;
+  padding: 1.75rem;
   background: var(--white);
   border-radius: var(--radius-md);
 
@@ -14,6 +12,26 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 
   box-sizing: border-box;
   flex-shrink: 0;
+}
+.card-option-text{
+ display: flex;
+width: 21.25rem;
+height: 13.75rem;
+padding: 1.75rem;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 0.88rem;
+}
+.card-option-text .text{
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+}
+.card-option-text .text p{
+  font-weight: var(--font-regular);
+  font-size: 0.875rem;
+  
 }
 .icon-card{
   width: 2.375rem;
@@ -36,6 +54,9 @@ input[type="radio"]:checked + .card-option {
 background: var(--green-700);
 }
 input[type="radio"]:checked + .card-option h3 {
+color: var(--green-100);
+}
+input[type="radio"]:checked + .card-option-text .text {
 color: var(--green-100);
 }
 input[type="radio"]:checked +.card-option .icon-card {
