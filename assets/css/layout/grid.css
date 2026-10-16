@@ -1,5 +1,7 @@
 /* css/layout/grid.css */
-
+  .padding-default {
+    padding: 1rem 3rem;
+  }
 .container {
   width: 100%;
   max-width: 75rem;

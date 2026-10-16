@@ -9,12 +9,27 @@
   <body>
     <!-- BARRA DE NAVEGAÇÃO -->
     <header class="navbar">
-      <a href="#inicio">
+      <a href="#inicio" aria-label="Ir para o início">
         <img src="assets/img/logo.svg" alt="Aprenda+" width="85" height="85" />
       </a>
-      <nav>
+
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav"
+        aria-label="Abrir menu de navegação"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="nav" aria-label="Navegação principal">
         <ul class="nav-links">
-          <li><a href="pages/Contatos.html">Contato</a></li>
+          <li><a href="Contatos.html">Contato</a></li>
+          <li><a href="./pages/">Sobre nós</a></li>
           <li><a href="login.html">Entrar</a></li>
         </ul>
       </nav>
@@ -430,5 +445,6 @@
         </div>
       </section>
     </main>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
