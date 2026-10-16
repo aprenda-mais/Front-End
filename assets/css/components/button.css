@@ -98,3 +98,6 @@ flex-shrink: 0;
 .btn-principal:active {
     transform: scale(0.99);
 }
+.btn-default{
+  gap: .5rem;
+}

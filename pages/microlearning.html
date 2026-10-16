@@ -11,26 +11,24 @@
 <body>
 
   <!-- Topo -->
-  <header class="header-top">
-    <div class="learning-badge">
+  <header class="top">
+    <span class="icon-top">
       <!-- Ícone de Lâmpada -->
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-1 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
-        <path d="M9 18h6"></path>
-        <path d="M10 22h4"></path>
-      </svg>
-      <span>micro-learning</span>
-    </div>
+       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M12.5 11.6668C12.6667 10.8334 13.0833 10.25 13.75 9.58332C14.5833 8.83326 15 7.74984 15 6.66642C15 5.34023 14.4732 4.06836 13.5355 3.1306C12.5979 2.19284 11.3261 1.66602 10 1.66602C8.67392 1.66602 7.40215 2.19284 6.46447 3.1306C5.52678 4.06836 5 5.34023 5 6.66642C5 7.49982 5.16667 8.4999 6.25 9.58332C6.83333 10.1667 7.33333 10.8334 7.5 11.6668M7.5 15.0004H12.5M8.33333 18.334H11.6667" stroke="#133826" stroke-width="1.8" stroke-linecap="round"/>
+</svg>
+      micro-learning
+    </span>
   </header>
 
   <!-- Conteúdo Principal -->
-  <main class="main-content">
-    <div class="intro-group">
-      <h1 class="page-title">Um respiro antes de começar.</h1>
-      <p class="page-subtitle">Leia com calma. As reflexões mudam a cada poucos segundos.</p>
+  <main class="container-form card-form">
+    <div class="introducao">
+      <h1 class="title-form">Um respiro antes de começar.</h1>
+      <p class="subtitle">Leia com calma. As reflexões mudam a cada poucos segundos.</p>
     </div>
 
-    <section class="quote-card">
+    <div class="card-info card-info-microlearning">
       <span class="quote-category">Higiene do sono &amp; hidratação</span>
       
       <p class="quote-text">
@@ -38,18 +36,19 @@
       </p>
 
       <span class="quote-meta">Micro-conceito do dia • 1 de 3</span>
-    </section>
+    </div>
   </main>
 
   <!-- Rodapé -->
-  <footer class="footer-bar">
-    <button type="button" class="btn-continuar" onclick="window.location.href='checkin_tarefas.html'">
+  <footer class="footer">
+    <button type="button" class="btn-hero btn-default" onclick="window.location.href='checkin_tarefas.html'">
       Continuar
       <!-- Ícone de Seta -->
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="5" y1="12" x2="19" y2="12"></line>
-        <polyline points="12 5 19 12 12 19"></polyline>
-      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#2D5B46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 16L16 12L12 8" stroke="#2D5B46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M8 12H16" stroke="#2D5B46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
     </button>
   </footer>
 

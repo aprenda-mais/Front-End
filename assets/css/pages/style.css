@@ -4,7 +4,7 @@
 @import "../layout/header.css";
 @import "../components/hero.css";
 @import "../layout/grid.css";
-@import "../components/cards/learn-card.css";
+@import "../components/cards/card-info.css";
 @import "../components/cards/card-task.css";
 body {
   line-height: 1.5;
@@ -260,19 +260,19 @@ small {
   .navbar {
     padding-inline: 1.5rem;
   }
-  .learn-card-top-center{
+  .card-info-top-center{
     border-radius: var(--radius-top-right) !important;
   }
-  .learn-card-top-left{
+  .card-info-top-left{
     border-radius: var(--radius-top-left) !important;
   }
-  .learn-card-bottom-center{
+  .card-info-bottom-center{
     border-radius: var(--radius-bottom-left) !important;
   }
-  .learn-card-bottom-right{
+  .card-info-bottom-right{
     border-radius: var(--radius-bottom-right) !important;
   }
-  [class*="learn-card-"]{
+  [class*="card-info-"]{
     border-radius: var(--radius-sm);
   }
   .hero-card {
@@ -322,13 +322,13 @@ small {
 }
 
 @media (max-width: 36.25rem) {
-    [class*="learn-card-"]{
+    [class*="card-info-"]{
     border-radius: var(--radius-sm) !important; 
   }
-  .learn-card-top-left{
+  .card-info-top-left{
     border-radius: 40px 40px 20px 20px !important;
   }
-  .learn-card-bottom-right{
+  .card-info-bottom-right{
     border-radius: 20px 20px 40px 40px !important;
   }
   .navbar {
@@ -351,7 +351,7 @@ small {
     border-radius: 1.5rem;
   }
 
-  .learn-card {
+  .card-info {
     align-items: flex-start;
   }
 

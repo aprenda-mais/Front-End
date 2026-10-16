@@ -1,5 +1,5 @@
 
-.learn-card {
+.card-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,27 +13,27 @@
   transition: transform 0.2s ease;
 }
 
-.learn-card-top-left {
+.card-info-top-left {
   border-radius: var(--radius-top-left);
 }
 
-.learn-card-top-center,
-.learn-card-bottom-center {
+.card-info-top-center,
+.card-info-bottom-center {
   border-radius: 1.2rem;
 }
 
-.learn-card-top-right {
+.card-info-top-right {
   border-radius: var(--radius-top-right);
 }
 
-.learn-card-bottom-left {
+.card-info-bottom-left {
   border-radius: var(--radius-bottom-left);
 }
 
-.learn-card-bottom-right {
+.card-info-bottom-right {
   border-radius: var(--radius-bottom-right);
 }
 
-.learn-card:hover {
+.card-info:hover {
   transform: translateY(-2px);
 }
