@@ -1,7 +1,12 @@
-/* Importa todo o layout base, fontes e cores do style.css */
-@import "checkin-tarefas.css";
+@import "../base/variables.css";
+@import "../base/tipography.css";
+@import "../base/reset.css";
+@import"../layout/form.css";
+@import "../components/button.css";
 
-/* Container central da ilustração do troféu */
+body{
+  background-color: var(--green-30);
+}
 .trophy-container {
   display: flex;
   justify-content: center;
@@ -13,21 +18,4 @@
 .trophy-container img{
   width: min(100%, 360px);
   height: auto;
-}
-
-/* Botão "Voltar para home" escuro e arredondado */
-.btn-home {
-  background-color: var(--color-title);
-  color: #ffffff;
-  border-radius: 999px;
-  gap: 10px;
-}
-
-.btn-home svg {
-  stroke: #ffffff;
-}
-
-.btn-home:hover {
-  background-color: #0b2418;
-  transform: translateY(-1px);
 }
