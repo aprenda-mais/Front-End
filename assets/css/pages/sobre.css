@@ -1,4 +1,4 @@
-@import 'card.css';
+@import '../components/cards/card.css';
 :root {
   --bg-page: #fff;
   --bg-gradil: linear-gradient(104deg, #d9f9e1 10.49%, #b3edbb 60.09%);

@@ -1,0 +1,109 @@
+@import "../button.css";
+.task-card{
+display: flex;
+flex-direction: column;
+align-items: center;
+border-radius: 1.5rem;
+border: 1px solid var(--green-30);
+background: var(--white);
+box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.08);
+padding: 1.25rem;
+}
+
+.card-in-trail .task-card-content{
+    gap: 4.8rem;
+}
+
+.task-card-content{
+    display: flex;
+flex-direction: column;
+gap: 1.81rem;
+flex: 1 0 0;
+align-self: stretch;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.header-card{
+    display: flex;
+align-items: center;
+justify-content: center;
+gap: 11.25rem;
+}
+.task-pill-header{
+    display: flex;
+padding: 0.3rem 0.6rem;
+align-items: center;
+ flex-shrink: 0;
+border-radius: 62.4375rem;
+background: var(--green-30);
+color: var(--green-700);
+border: 0.5px solid var(--green-700);
+font-family: var(--font-main);
+font-size: 0.6875rem;
+font-style: normal;
+font-weight: var(font-regular);
+line-height: normal;
+}
+.task-title{
+    color: var(--green-700);
+font-size: 2rem;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+}
+.cta-task{
+    display: flex;
+    gap: 0.75rem;
+    flex-direction: column;
+    align-items: center;
+}
+.task-cadastro{
+    gap: 2rem;
+}
+.cta-login{
+    color: var(--green-900);
+text-align: center;
+font-size: 0.8125rem;
+font-style: normal;
+font-weight: var(--font-bold);
+line-height: normal;
+text-decoration: underline;
+cursor: pointer;
+}
+.task-description{
+    color: var(--green-900);
+font-size: 0.875rem;
+text-align: center;
+font-style: normal;
+align-self: stretch;
+font-weight: var(--font-regular);
+line-height: 1.25rem; /* 142.857% */
+}
+.footer-card{
+    display: flex;
+flex-direction: column;
+align-items: center;
+gap: 0.625rem;
+}
+.task-pills{
+    display: flex;
+align-items: flex-start;
+align-content: flex-start;
+font-family: var(--font-main);
+gap: 0.5rem;
+align-self: stretch;
+flex-wrap: wrap;
+}
+.task-pill-footer{
+    display: flex;
+padding: 0.375rem 0.625rem;
+align-items: flex-start;
+border-radius: 62.4375rem;
+background: var(--green-30);
+color: var(--green-700);
+font-size: 0.6875rem;
+font-style: normal;
+font-weight: var(--font-bold);
+line-height: normal;
+}

@@ -4,41 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trilha inicial</title>
-  <link rel="stylesheet" href="../assets/css/trilha_inicial.css">
+  <link rel="stylesheet" href="../assets/css/pages/trilha-inicial.css">
   <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
 </head>
 <body>
 
   <!-- Topo -->
-  <header class="header-topo">
-    <div class="brand-logo">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#2D5B46" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="5" r="2.5"></circle>
-        <line x1="12" y1="7.5" x2="12" y2="21"></line>
-        <line x1="8" y1="10.5" x2="16" y2="10.5"></line>
-        <path d="M5 14a7 7 0 0 0 14 0"></path>
-      </svg>
-      <span>Trilha inicial</span>
-    </div>
+  <header class="top">
+    <span class="icon-top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M6 22C7.65685 22 9 20.6569 9 19C9 17.3431 7.65685 16 6 16C4.34315 16 3 17.3431 3 19C3 20.6569 4.34315 22 6 22Z" stroke="#2D5B46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M9 19H17.5C18.4283 19 19.3185 18.6313 19.9749 17.9749C20.6313 17.3185 21 16.4283 21 15.5C21 14.5717 20.6313 13.6815 19.9749 13.0251C19.3185 12.3687 18.4283 12 17.5 12H6.5C5.57174 12 4.6815 11.6313 4.02513 10.9749C3.36875 10.3185 3 9.42826 3 8.5C3 7.57174 3.36875 6.6815 4.02513 6.02513C4.6815 5.36875 5.57174 5 6.5 5H15" stroke="#2D5B46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 8C19.6569 8 21 6.65685 21 5C21 3.34315 19.6569 2 18 2C16.3431 2 15 3.34315 15 5C15 6.65685 16.3431 8 18 8Z" stroke="#2D5B46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+      Trilha inicial
+    </span>
   </header>
 
   <!-- Conteúdo Principal -->
-  <main class="page-container">
-    <h1 class="page-title">Escolha um trilha para começar</h1>
-
-    <div class="trilhas-grid">
+  <main class="container-form">
+    <div class="introducao">
+    <h1 class="title-form">Escolha um trilha para começar</h1>
+</div>
+    <div class="cards-grid trail">
 
       <!-- Card 1: Higiene do sono -->
-      <label class="card-item">
-        <input type="radio" name="trilha" value="sono" checked>
-        <div class="task-card">
+             <div class="task-card card-in-trail">
           <div class="task-card-content">
             <div class="header-card">
               <span class="task-pill-header">2 min/dia</span>
               <span class="task-pill-header">3 micro-ações</span>
             </div>
             <h3 class="task-title">Higiene do sono</h3>
-            <a href="../home.html" class="btn-task">
+            <a href="./home.html" class="btn-task">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M5 5.0001C4.9999 4.6482 5.09265 4.30249 5.26888 3.99789C5.44512 3.6933 5.69861 3.44059 6.00375 3.2653C6.30889 3.09001 6.65488 2.99833 7.00679 2.99952C7.3587 3.00072 7.70406 3.09474 8.008 3.2721L20.005 10.2701C20.3078 10.4458 20.5591 10.6978 20.7339 11.0011C20.9088 11.3044 21.0009 11.6482 21.0012 11.9982C21.0015 12.3483 20.91 12.6923 20.7357 12.9958C20.5614 13.2994 20.3105 13.5519 20.008 13.7281L8.008 20.7281C7.70406 20.9055 7.3587 20.9995 7.00679 21.0007C6.65488 21.0019 6.30889 20.9102 6.00375 20.7349C5.69861 20.5596 5.44512 20.3069 5.26888 20.0023C5.09265 19.6977 4.9999 19.352 5 19.0001V5.0001Z" fill="#2D5B46" stroke="#2D5B46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -56,12 +54,9 @@
             </div>
           </div>
         </div>
-      </label>
 
       <!-- Card 2: Alimentação -->
-      <label class="card-item">
-        <input type="radio" name="trilha" value="alimentacao">
-        <div class="task-card">
+           <div class="task-card card-in-trail">
           <div class="task-card-content">
             <div class="header-card">
               <span class="task-pill-header">2 min/dia</span>
@@ -86,12 +81,9 @@
             </div>
           </div>
         </div>
-      </label>
 
       <!-- Card 3: Saúde mental -->
-      <label class="card-item">
-        <input type="radio" name="trilha" value="saude_mental">
-        <div class="task-card">
+       <div class="task-card card-in-trail">
           <div class="task-card-content">
             <div class="header-card">
               <span class="task-pill-header">2 min/dia</span>
@@ -116,8 +108,6 @@
             </div>
           </div>
         </div>
-      </label>
-
     </div>
   </main>
 

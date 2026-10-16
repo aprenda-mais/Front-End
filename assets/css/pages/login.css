@@ -1,162 +1,22 @@
-@import 'style.css';
-
-/* CONFIGURAÇÕES GERAIS */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --verde-escuro: #2d5c49;
-    --verde-claro: #b0efb9;
-    --verde-texto: #315b49;
-    --borda: #d8e3da;
-    --texto-secundario: #56675c;
-}
-
-html,
-body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
-}
+@import "../base/variables.css";
+@import "../base/tipography.css";
+@import "../base/reset.css";
+@import"../layout/form.css";
+@import"../components/cards/card-form.css";
 
 body {
-    min-height: 100vh;
-    color: var(--verde-texto);
-}
-
-/*principal*/
-
-.container {
-    width: 100%;
-    height: 100vh;
-    height: 100dvh;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    padding: 65px 20px 10px;
-}
-
- /*=================================
-   INTRODUÇÃO
-================================= */
-
-.introducao {
-    text-align: center;
-}
-
-.introducao h1 {
-    font-family: "Poppins", Arial, sans-serif;
-    font-size: 32px;
-    line-height: 1.2;
-    margin-bottom: 5px;
-}
-
-.introducao p {
-    font-size: 17px;
-    line-height: 1.35;
-}
-
-/* =================================
-   FORMULÁRIO
-================================= */
-
-.formulario {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-
-    background: #fff;
-    border-radius: 17px;
-}
-
-/* =================================
-   CAMPOS
-================================= */
-
-.campo {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.campo label {
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.campo input {
-    width: 100%;
-    height: 47px;
-
-    padding: 0 14px;
-
-    border: 1px solid var(--borda);
-    border-radius: 12px;
-
-    background: #fff;
-    color: #333;
-
-    font-family: inherit;
-    font-size: 13px;
-
-    outline: none;
-}
-
-.campo input:focus {
-    border-color: var(--verde-escuro);
-}
-
-.campo input::placeholder {
-    color: #849087;
-}
-
-.campo small {
-    font-size: 11px;
-    color: #68766c;
-    margin-top: -2px;
-}
-
-/* =================================
-   BOTÃO PRINCIPAL
-================================= */
-
-.botao-principal {
-    width: 100%;
-    min-height: 49px;
-
-    border: none;
-    border-radius: 13px;
-
-    font-size: 14px;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    box-shadow: 0 3px 4px #00000030;
-    transition: opacity 0.2s, transform 0.2s;
-}
-
-.botao-principal:hover {
-    opacity: 0.9;
-}
-
-.botao-principal:active {
-    transform: scale(0.99);
+    background: var(--green-700);
 }
 
 /* =================================
    ALTERNATIVA DE ACESSO
 ================================= */
-
+.login{
+    color: var(--green-300);
+}
+.login-subtitle{
+    color: var(--green-500);
+}
 .alternativa {
     text-align: center;
     font-size: 13px;

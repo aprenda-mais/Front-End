@@ -1,0 +1,144 @@
+@import "../base/variables.css";
+@import "../base/tipography.css";
+@import "../base/reset.css";
+@import"../layout/form.css";
+@import"../components/cards/card-form.css";
+
+
+body {
+    background-color: var(--green-300);
+}
+
+
+/* =================================
+   ALTERNATIVA DE ACESSO
+================================= */
+
+.alternativa {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-main);
+}
+
+.alternativa a,
+.termos a {
+    color: var(--text-main);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* =================================
+   AVISOS
+================================= */
+
+.aviso {
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* =================================
+   TERMOS DE USO
+================================= */
+
+.termos {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--green-900);
+}
+
+.termos input {
+    margin-top: 3px;
+    accent-color: var(--green-700);
+    flex-shrink: 0;
+}
+
+
+
+/* =================================
+   CELULARES
+================================= */
+
+@media (max-width: 500px) {
+    .topo {
+        top: 14px;
+        left: 16px;
+        font-size: 16px;
+    }
+
+    .container {
+        padding: clamp(1rem, 4vh, 3rem) 14px 10px;
+    }
+
+    .pagina-cadastro .introducao {
+        margin-bottom: 10px;
+    }
+
+    .pagina-cadastro .formulario {
+        padding: 12px 16px;
+        gap: 7px;
+    }
+
+    .pagina-cadastro .campo input {
+        height: 31px;
+        padding: 0 10px;
+    }
+
+    .pagina-cadastro .termos {
+        gap: 7px;
+        font-size: 10px;
+        line-height: 1.3;
+    }
+
+    .pagina-cadastro .botao-principal {
+        min-height: 33px;
+    }
+}
+
+/* =================================
+   TELAS COM POUCA ALTURA
+================================= */
+
+@media (max-height: 650px) {
+    .container {
+        padding-top: 48px;
+        padding-bottom: 6px;
+    }
+
+    .pagina-cadastro .introducao {
+        margin-bottom: 7px;
+    }
+
+    .pagina-cadastro .introducao h1 {
+        font-size: 20px;
+    }
+
+    .pagina-cadastro .introducao p {
+        font-size: 11px;
+    }
+
+    .pagina-cadastro .formulario {
+        padding: 8px 14px;
+        gap: 5px;
+    }
+
+    .pagina-cadastro .campo input {
+        height: 28px;
+    }
+
+    .pagina-cadastro .campo label {
+        font-size: 10px;
+    }
+
+    .pagina-cadastro .campo small {
+        font-size: 9px;
+    }
+
+    .pagina-cadastro .botao-principal {
+        min-height: 30px;
+    }
+}

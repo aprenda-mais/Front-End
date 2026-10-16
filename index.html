@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aprenda+</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/pages/style.css" />
   </head>
   <body>
     <!-- BARRA DE NAVEGAÇÃO -->
@@ -28,9 +28,8 @@
 
       <nav id="nav" aria-label="Navegação principal">
         <ul class="nav-links">
-          <li><a href="#inicio">Início</a></li>
           <li><a href="Contatos.html">Contato</a></li>
-          <li><a href="sobre.html">Sobre nós</a></li>
+          <li><a href="./pages/">Sobre nós</a></li>
           <li><a href="login.html">Entrar</a></li>
         </ul>
       </nav>
@@ -164,7 +163,7 @@
             </h1>
             <p class="hero-subtitle">Micro-hábitos para sair da inércia.</p>
 
-            <a href="cadastro.html" class="btn-hero">
+            <a href="./pages/cadastro.html" class="btn-hero">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -201,7 +200,12 @@
           </div>
 
           <div class="hero-illustration">
-            <img src="assets/img/hero-visual.svg" alt="pessoa cansada" width="700" height="500" />
+            <img
+              src="assets/img/hero-visual.svg"
+              alt="pessoa cansada"
+              width="700"
+              height="500"
+            />
           </div>
         </div>
       </section>
@@ -209,38 +213,38 @@
       <!-- SEÇÃO: O QUE VOCÊ VAI APRENDER E FAZER -->
       <section class="section-learn">
         <div>
-          <h2 class="section-title-center">O que você vai aprender e fazer?</h2>
+          <h2>O que você vai aprender e fazer?</h2>
 
           <div class="learn-container">
             <!-- Grade com seis cartões -->
             <div class="learn-grid">
               <!-- Cartão 1 -->
-              <div class="learn-card learn-card-top-left">
+              <div class="card-info card-info-top-left">
                 <span class="category-badge">Alimentação</span>
                 <h3>Atenção plena às refeições</h3>
               </div>
               <!-- Cartão 2 -->
-              <div class="learn-card learn-card-top-center">
+              <div class="card-info card-info-top-center">
                 <span class="category-badge">Higiene do sono</span>
                 <h3>Ritual noturno desacelerado</h3>
               </div>
               <!-- Cartão 3 -->
-              <div class="learn-card learn-card-top-right">
+              <div class="card-info card-info-top-right">
                 <span class="category-badge">Saúde Mental</span>
                 <h3>Autocuidado livre de culpa</h3>
               </div>
               <!-- Cartão 4 -->
-              <div class="learn-card learn-card-bottom-left">
+              <div class="card-info card-info-bottom-left">
                 <span class="category-badge">Higiene do sono</span>
                 <h3>Consistência ao acordar</h3>
               </div>
               <!-- Cartão 5 -->
-              <div class="learn-card learn-card-bottom-center">
+              <div class="card-info card-info-bottom-center">
                 <span class="category-badge">Saúde Mental</span>
                 <h3>Regulação rápida da ansiedade</h3>
               </div>
               <!-- Cartão 6 -->
-              <div class="learn-card learn-card-bottom-right">
+              <div class="card-info card-info-bottom-right">
                 <span class="category-badge">Alimentação</span>
                 <h3>Hidratação sem esforço</h3>
               </div>
@@ -252,7 +256,13 @@
                 “Soltar o peso do agora abre espaço para o que chega amanhã.”
               </p>
               <div class="plants-graphic">
-                <img loading="lazy" src="assets/img/plant.svg" alt="" width="130" height="130" />
+                <img
+                  loading="lazy"
+                  src="assets/img/plant.svg"
+                  alt=""
+                  width="130"
+                  height="130"
+                />
               </div>
             </div>
           </div>
@@ -308,7 +318,10 @@
                       />
                     </svg>
                   </a>
-                  <a href="#" class="cta-login">Já tem conta? Faça o login</a>
+                  <p>
+                    ou<br />
+                    <a href="./pages/login.html" class="cta-login">Faça o login</a>
+                  </p>
                 </div>
                 <div class="footer-card">
                   <p class="task-description">
@@ -364,7 +377,10 @@
                       />
                     </svg>
                   </a>
-                  <a href="#" class="cta-login">Já tem conta? Faça o login</a>
+                  <p>
+                    ou<br />
+                    <a href="./pages/login.html" class="cta-login">Faça o login</a>
+                  </p>
                 </div>
                 <div class="footer-card">
                   <p class="task-description">
@@ -392,7 +408,7 @@
               <h2>O seu primeiro passo<br />leva apenas 2 minutos.</h2>
               <p>Sem metas impossíveis, sem cobrança e no seu próprio ritmo.</p>
             </div>
-            <a href="cadastro.html" class="btn-dark">
+            <a href="./pages/cadastro.html" class="btn-dark">
               Experimente
               <svg
                 xmlns="http://www.w3.org/2000/svg"

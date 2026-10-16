@@ -4,24 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saúde mental | Aprende+</title>
-  <link rel="stylesheet" href="./assets/css/SaudeMental.css">
+  <link rel="stylesheet" href="../assets/css/base/variables.css">
+  <link rel="stylesheet" href="../assets/css/pages/saude-mental.css">
 </head>
 <body>
   <header class="navbar">
-    <a href="index.html" aria-label="Voltar para o início">
-      <img src="assets/img/logo.svg" alt="Aprenda+" width="85" height="85" />
-    </a>
-
-    <nav aria-label="Navegação principal">
-      <ul class="nav-links">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="Contatos.html">Contato</a></li>
-        <li><a href="sobre.html">Sobre nós</a></li>
-        <li><a href="login.html">Entrar</a></li>
-      </ul>
-    </nav>
-  </header>
-
+      <a href="#inicio">
+        <img src="../assets/img/logo.svg" alt="Aprenda+" width="85" height="85" />
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="Contatos.html">Contato</a></li>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="login.html">Entrar</a></li>
+        </ul>
+      </nav>
+    </header>
+    
   <section class="topo" id="sobre">
     <div class="topo-texto">
       <h1>Saúde mental</h1>
@@ -32,7 +31,7 @@
         apoio para lidar com os desafios do dia a dia.
       </p>
     </div>
-    <img src="./assets/img/MenteLimpa.png" alt="Cuidando da mente" class="imagem-topo">
+    <img src="../assets/img/MenteLimpa.png" alt="Cuidando da mente" class="imagem-topo">
   </section>
   <section class="meditacao">
     <div class="meditacao-texto">
@@ -47,8 +46,8 @@
       </button>
     </div>
     <div class="imagens-meditacao">
-      <img src="./assets/img/meditando.png" alt="Descansando a mente" class="imagem-meditando">
-      <img src="./assets/img/meditação.png" alt="Descansando a mente" class="imagem-meditacao">
+      <img src="../assets/img/meditando.png" alt="Descansando a mente" class="imagem-meditando">
+      <img src="../assets/img/meditação.png" alt="Descansando a mente" class="imagem-meditacao">
     </div>
   </section>
   <section class="habitos">
@@ -60,17 +59,17 @@
       <div class="cartao">
         <h3>Qualidade do sono</h3>
         <p>Entenda como o sono afeta seu humor, concentração e produtividade, e veja dicas para melhorar sua rotina.</p>
-        <img src="./assets/img/Insomnia-bro.png" alt="Não consegue dormir" class="imagem-cartao">
+        <img src="../assets/img/Insomnia-bro.png" alt="Não consegue dormir" class="imagem-cartao">
       </div>
       <div class="cartao">
         <h3>Técnicas de relaxamento</h3>
         <p>Respiração, meditação e mindfulness para acalmar a mente e reduzir a tensão.</p>
-        <img src="./assets/img/Mental health-bro.png" alt="Relaxando a mente" class="imagem-cartao">
+        <img src="../assets/img/Mental health-bro.png" alt="Relaxando a mente" class="imagem-cartao">
       </div>
       <div class="cartao">
         <h3>Sinais de alerta</h3>
         <p>Saiba identificar quando é hora de buscar ajuda profissional e não ignore os sinais.</p>
-        <img src="./assets/img/Psychologist-bro.png" alt="Sinais de alerta" class="imagem-cartao">
+        <img src="../assets/img/Psychologist-bro.png" alt="Sinais de alerta" class="imagem-cartao">
       </div>
     </div>
   </section>
@@ -138,6 +137,6 @@
     </div>
     <div class="player" aria-hidden="true"><div id="playerYoutube"></div></div>
   </div>
-  <script src="./assets/js/SaudeMental.js"></script>
+  <script src="../assets/js/SaudeMental.js"></script>
 </body>
 </html>

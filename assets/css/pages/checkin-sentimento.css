@@ -1,0 +1,11 @@
+@import "../base/variables.css";
+@import "../base/tipography.css";
+@import "../base/reset.css";
+@import"../layout/form.css";
+@import"../layout/grid.css";
+@import"../components/cards/card-form-options.css";
+@import "../components/button.css";
+
+body{
+  background-color: var(--green-30);
+}

@@ -1,0 +1,23 @@
+/* css/layout/grid.css */
+  .padding-default {
+    padding: 1rem 3rem;
+  }
+.container {
+  width: 100%;
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1rem, 4vw, 1.5rem);
+  padding-right: clamp(1rem, 4vw, 1.5rem);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2.94rem;
+  grid-template-rows: repeat(2,1fr);
+}
+.trail{
+    grid-template-rows: repeat(1,1fr);
+
+  }

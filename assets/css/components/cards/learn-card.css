@@ -1,0 +1,39 @@
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  min-height: 7.75rem;
+  padding: 1.25rem;
+  background-color: var(--white);
+  border: 1px solid var(--green-100);
+  box-shadow: 0 0.5rem 1.125rem rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease;
+}
+
+.card-info-top-left {
+  border-radius: var(--radius-top-left);
+}
+
+.card-info-top-center,
+.card-info-bottom-center {
+  border-radius: 1.2rem;
+}
+
+.card-info-top-right {
+  border-radius: var(--radius-top-right);
+}
+
+.card-info-bottom-left {
+  border-radius: var(--radius-bottom-left);
+}
+
+.card-info-bottom-right {
+  border-radius: var(--radius-bottom-right);
+}
+
+.card-info:hover {
+  transform: translateY(-2px);
+}

@@ -1,0 +1,62 @@
+.top {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+}
+.top span{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: var(--font-bold);
+}
+.icon-top{
+    font-family: var(--font-secondary);
+    font-weight: var(--font-bold);
+    font-size: var(1.5rem)
+
+}
+.icon-top svg{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.container-form {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card-form{
+    text-align: center;
+    min-height: 90dvh;
+}
+
+.introducao {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.introducao .title {
+    font-family: var(--font-main);
+    font-size: 2.25rem;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+}
+
+.introducao .subtitle {
+    opacity: 0.6;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    font-weight: var(--font-regular);
+}
+.footer{
+    display: flex;
+    padding-right: 3rem;
+    align-items: center;
+    justify-content: flex-end;
+}

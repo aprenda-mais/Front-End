@@ -1,0 +1,21 @@
+@import "../base/variables.css";
+@import "../base/tipography.css";
+@import "../base/reset.css";
+@import"../layout/form.css";
+@import "../components/button.css";
+
+body{
+  background-color: var(--green-30);
+}
+.trophy-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 28px 0 10px;
+  width: 100%;
+}
+
+.trophy-container img{
+  width: min(100%, 360px);
+  height: auto;
+}

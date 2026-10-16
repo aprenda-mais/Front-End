@@ -1,0 +1,12 @@
+@import "../base/variables.css";
+@import "../base/tipography.css";
+@import "../base/reset.css";
+@import"../layout/form.css";
+@import"../layout/grid.css";
+@import"../components/cards/card-task.css";
+@import "../components/button.css";
+
+/* Apenas ajustes de layout da página e botão continuar */
+body {
+  background-color: var(--green-100);
+}

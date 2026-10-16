@@ -1,0 +1,40 @@
+@import "../base/variables.css";
+@import "../base/tipography.css";
+@import "../base/reset.css";
+@import"../layout/form.css";
+@import"../layout/grid.css";
+@import"../components/cards/card-form-options.css";
+@import "../components/button.css";
+
+body{
+  background-color: var(--green-30);
+}
+.card-task-form{
+  position: relative;
+  margin: 1.75rem;
+}
+/* Pílula "✓ Feito" (Oculta quando desmarcado) */
+.pill-done {
+  position: absolute;
+  top: 0.62rem;
+  right: 0.88rem;
+ display: flex;
+padding: 0.1875rem 0.4375rem;
+align-items: center;
+opacity: 0;
+gap: 0.25rem;
+border-radius: var(--radius-pill);
+background: var(--green-100);
+color: var(--green-900);
+font-size: 0.75rem;
+font-weight: var(--font-medium);
+}
+
+.pill-done svg {
+width: 1.125rem;
+height: 1.125rem;
+  stroke: var(--green-900);
+}
+.card-item input:checked + .card-option .pill-done {
+opacity: 1;
+}

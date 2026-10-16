@@ -1,0 +1,58 @@
+/* 1. Box-sizing universal e zeramento de margens/preenchimentos */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Ocupação de altura completa do documento */
+html,
+body {
+  min-height: 100%;
+}
+
+/* 3. Evita que textos longos estourem contêineres */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 4. Imagens e mídias flexíveis */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 5. Herança tipográfica para formulários */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* 6. Normalização de botões */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* 7. Remoção de marcadores de lista padrão */
+ul,
+ol {
+  list-style: none;
+}

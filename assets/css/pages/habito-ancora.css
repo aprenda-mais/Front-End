@@ -1,0 +1,46 @@
+@import "../base/variables.css";
+@import "../base/tipography.css";
+@import "../base/reset.css";
+@import"../layout/form.css";
+@import"../layout/grid.css";
+@import"../components/cards/card-form-options.css";
+@import "../components/button.css";
+
+
+body {
+    background-color: var(--green-30);
+}
+
+
+
+/* --- Responsividade --- */
+@media (max-width: 960px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 24px 20px;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .title {
+        font-size: 1.85rem;
+    }
+    .subtitle {
+        font-size: 0.95rem;
+    }
+    .footer {
+        justify-content: stretch;
+    }
+    .btn-continue {
+        width: 100%;
+        justify-content: center;
+    }
+}

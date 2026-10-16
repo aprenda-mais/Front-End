@@ -1,0 +1,53 @@
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 100 900;
+  font-style: normal;
+  src: url("../../fonts/Inter-VariableFont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 100 900;
+  font-style: italic;
+  src: url("../../fonts/Inter-Italic-VariableFont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../../fonts/Poppins-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../../fonts/Poppins-Bold.ttf") format("truetype");
+}
+body {
+  font-family:var(--font-secondary);
+  line-height: 1.5;
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-main);
+  font-weight: var(--font-bold);
+  line-height: 1.2;
+  color: var(--text-main);
+}
+
+h1 { font-size: 2rem; }
+h2 { 
+margin-bottom: 1rem;
+font-family: var(--font-main);
+font-size: 1.75rem;
+font-style: normal;
+font-weight: var(--font-bold);
+line-height: 2.25rem;
+}
+p  { font-size: 1rem;}
+a  { font-family: var(--font-main);color: var(--text-main); text-decoration: none; }
+small { font-size: 0.875rem; }
