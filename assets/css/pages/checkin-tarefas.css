@@ -1,288 +1,37 @@
-@import "../base/style.css";
-:root {
-  /* Cores extraídas da paleta */
-  --bg-page: #F4F8F5;              /* Fundo geral da página */
-  --color-selected: #2D4A3E;       /* Fundo verde escuro do card selecionado */
-  --color-title: #133826;          /* Título principal da página */
-  --color-mint: #D9F9E1;           /* Verde claro/menta para ícones e pílulas */
-  --color-unselected-bg: #FFFFFF;  /* Fundo branco do card desmarcado */
-  --color-btn-bg: #EDF3F0;         /* Fundo do botão Confirmar */
-  --color-text-dark: #2D4A3E;      /* Texto do card desmarcado */
+@import "../base/variables.css";
+@import "../base/tipography.css";
+@import "../base/reset.css";
+@import"../layout/form.css";
+@import"../layout/grid.css";
+@import"../components/cards/card-form-options.css";
+@import "../components/button.css";
 
-  /* Tipografia */
-  --font-heading: 'Poppins', sans-serif;
-  --font-body: 'Inter', sans-serif;
-
-  /* Formas e Sombras */
-  --card-radius: 20px;
-  --card-shadow: 0 10px 24px -4px rgba(19, 56, 38, 0.06), 0 4px 12px -2px rgba(19, 56, 38, 0.04);
-  --card-shadow-hover: 0 14px 28px -4px rgba(19, 56, 38, 0.12);
+body{
+  background-color: var(--green-30);
 }
-
-/* Reset de base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--font-body);
-  background-color: var(--bg-page);
-  color: var(--color-title);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 40px 60px;
-}
-
-/* Cabeçalho superior */
-.header-top {
-  display: flex;
-  align-items: center;
-}
-
-.brand-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: var(--color-selected);
-}
-
-.brand-badge svg {
-  width: 20px;
-  height: 20px;
-  stroke: var(--color-selected);
-}
-
-/* Estrutura central */
-.main-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px auto;
-  width: 100%;
-  max-width: 980px;
-}
-
-.title-group {
-  text-align: center;
-  margin-bottom: 64px;
-}
-
-.page-title {
-  font-family: var(--font-heading);
-  font-size: 2.6rem;
-  font-weight: 800;
-  color: var(--color-title);
-  letter-spacing: -0.03em;
-  margin-bottom: 12px;
-}
-
-.page-subtitle {
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: var(--color-selected);
-  opacity: 0.85;
-}
-
-/* Grelha dos cartões */
-.actions-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  width: 100%;
-}
-
-.action-item {
-  display: block;
-  cursor: pointer;
+.card-task-form{
   position: relative;
-  user-select: none;
+  margin: 1.75rem;
 }
-
-/* Input invisível */
-.action-input {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
-/* --- ESTADO NÃO SELECIONADO (Base de Referência) --- */
-.action-card {
-  position: relative;
-  background-color: var(--color-unselected-bg);
-  border-radius: var(--card-radius);
-  padding: 28px 20px 24px;
-  min-height: 154px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  box-shadow: var(--card-shadow);
-  border: 2px solid transparent;
-  transition: all 0.22s ease-in-out;
-}
-
 /* Pílula "✓ Feito" (Oculta quando desmarcado) */
 .pill-done {
   position: absolute;
-  top: 14px;
-  right: 14px;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 4px 10px;
-  background-color: var(--color-mint);
-  color: var(--color-selected);
-  border-radius: 999px;
-  font-family: var(--font-heading);
-  font-size: 0.75rem;
-  font-weight: 700;
-  opacity: 0;
-  transform: scale(0.85);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  top: 0.62rem;
+  right: 0.88rem;
+ display: flex;
+padding: 0.1875rem 0.4375rem;
+align-items: center;
+opacity: 0;
+gap: 0.25rem;
+border-radius: var(--radius-pill);
+background: var(--green-100);
+color: var(--green-900);
+font-size: 0.75rem;
+font-weight: var(--font-medium);
 }
 
 .pill-done svg {
-  width: 12px;
-  height: 12px;
-  stroke: var(--color-selected);
-}
-
-/* Círculo do ícone (Modo desmarcado: fundo escuro e traço menta) */
-.icon-circle {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: var(--color-selected);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: background-color 0.22s ease;
-}
-
-.icon-circle svg {
-  width: 22px;
-  height: 22px;
-  stroke: var(--color-mint);
-  transition: stroke 0.22s ease;
-}
-
-/* Título da micro-ação (Modo desmarcado: texto verde escuro) */
-.action-card h3 {
-color: var(--color-selected);
-text-align: center;
-font-family: Inter, sans-serif;
-font-size: 1.125rem;
-font-style: normal;
-font-weight: 600;
-line-height: 1.375rem; /* 122.222% */
-  margin: 0;
-  transition: color 0.22s ease;
-}
-
-/* Efeito Hover */
-.action-item:hover .action-card {
-  transform: translateY(-3px);
-  box-shadow: var(--card-shadow-hover);
-}
-
-/* --- ESTADO SELECIONADO (:checked) --- */
-.action-input:checked + .action-card {
-  background-color: var(--color-selected);
-  transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(19, 56, 38, 0.16);
-}
-
-/* Torna a pílula visível */
-.action-input:checked + .action-card .pill-done {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Inverte as cores do ícone no modo selecionado */
-.action-input:checked + .action-card .icon-circle {
-  background-color: var(--color-mint);
-}
-
-.action-input:checked + .action-card .icon-circle svg {
-  stroke: var(--color-selected);
-}
-
-/* Texto passa a branco no modo selecionado */
-.action-input:checked + .action-card h3 {
-  color: #D9F9E1;
-}
-
-/* Rodapé e Botão de Confirmação */
-.footer-bar {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 24px;
-}
-
-.btn-confirm {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background-color: var(--color-btn-bg);
-  color: var(--color-title);
-  border: none;
-  padding: 14px 28px;
-  border-radius: 16px;
-  font-family: var(--font-heading);
-  font-size: 0.95rem;
-  font-weight: 700;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.btn-confirm svg {
-  width: 18px;
-  height: 18px;
-  stroke: var(--color-title);
-  transition: transform 0.2s ease;
-}
-
-.btn-confirm:hover {
-  background-color: #dbe7df;
-}
-
-.btn-confirm:hover svg {
-  transform: translateX(3px);
-}
-
-/* Responsividade */
-@media (max-width: 960px) {
-  .actions-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  body {
-    padding: 24px 20px;
-  }
-  .page-title {
-    font-size: 1.9rem;
-  }
-  .actions-grid {
-    grid-template-columns: 1fr;
-  }
-  .footer-bar {
-    justify-content: stretch;
-  }
-  .btn-confirm {
-    width: 100%;
-    justify-content: center;
-  }
+width: 1.125rem;
+height: 1.125rem;
+  stroke: var(--green-900);
 }

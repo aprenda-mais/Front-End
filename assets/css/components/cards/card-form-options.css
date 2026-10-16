@@ -1,8 +1,9 @@
 .card-option {
   padding: 1.75rem;
+  height: 100%;
   background: var(--white);
   border-radius: var(--radius-md);
-
+  font-family: var(--font-secondary);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,20 +51,23 @@ border-radius: 100%;
   width: 1.5rem;
 height: 1.5rem;
 }
-input[type="radio"]:checked + .card-option {
+.card-item input:checked + .card-option {
 background: var(--green-700);
 }
-input[type="radio"]:checked + .card-option h3 {
+.card-item input:checked + .card-option .pill-done {
+opacity: 1;
+}
+.card-item input:checked + .card-option h3 {
 color: var(--green-100);
 }
-input[type="radio"]:checked + .card-option-text .text {
+.card-item input:checked + .card-option-text .text {
 color: var(--green-100);
 }
-input[type="radio"]:checked +.card-option .icon-card {
+.card-item input:checked +.card-option .icon-card {
 background: var(--green-100);
 color: var(--green-700);
 }
-.container-form:has(input[type="radio"]:checked)
+.container-form:has(input:checked)
     + .footer
     .btn-form-card {
     opacity: 1;
@@ -72,12 +76,12 @@ color: var(--green-700);
       color: var(--green-100);
     }
 }
-.container-form:has(input[type="radio"]:checked)
+.container-form:has(input:checked)
     + .footer
     .btn-form-card:hover{
       background-color: var(--green-700);
       color: var(--green-100);
     }
-input[type="radio"] {
+.card-item input {
     display: contents;
 }
