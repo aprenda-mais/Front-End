@@ -54,9 +54,7 @@ height: 1.5rem;
 .card-item input:checked + .card-option {
 background: var(--green-700);
 }
-.card-item input:checked + .card-option .pill-done {
-opacity: 1;
-}
+
 .card-item input:checked + .card-option h3 {
 color: var(--green-100);
 }

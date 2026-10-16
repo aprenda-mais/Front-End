@@ -35,3 +35,6 @@ width: 1.125rem;
 height: 1.125rem;
   stroke: var(--green-900);
 }
+.card-item input:checked + .card-option .pill-done {
+opacity: 1;
+}

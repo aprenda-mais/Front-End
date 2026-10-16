@@ -1,5 +1,10 @@
-/* Importa tudo o que já foi feito na tela anterior */
-@import "checkin-tarefas.css";
+@import "../base/variables.css";
+@import "../base/tipography.css";
+@import "../base/reset.css";
+@import"../layout/form.css";
+@import"../layout/grid.css";
+@import"../components/cards/card-form-options.css";
+@import "../components/button.css";
 
 /* Bolinha (marcador circular concêntrico) no canto superior direito */
 .radio-dot {

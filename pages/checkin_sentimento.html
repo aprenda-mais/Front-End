@@ -5,90 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Check-in: Sentimento</title>
   <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
-  <link rel="stylesheet" href="../assets/css/base/variables.css">
   <link rel="stylesheet" href="../assets/css/pages/checkin-sentimento.css">
 </head>
 <body>
 
   <!-- Topo -->
-  <header class="header-top">
-    <div class="brand-badge">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="9"></circle>
-        <circle cx="12" cy="12" r="2.5"></circle>
-      </svg>
-      <span>escuta interna</span>
-    </div>
+  <header class="top">
+    <span class="icon-top">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-face-expressionless preview-icon"><path d="M14 10h2"/><path d="M8 10h2"/><path d="M8 16h8"/><circle cx="12" cy="12" r="10"/></svg>
+      escuta interna
+    </span>
   </header>
 
   <!-- Conteúdo Principal -->
-  <main class="main-container">
-    <div class="title-group">
-      <h1 class="page-title">Como você se sente agora?</h1>
-      <p class="page-subtitle">Registrar sua sensação ajuda a calibrar o ritmo dos próximos dias.</p>
+  <main class="container-form card-form">
+    <div class="introducao">
+      <h1 class="title-form">Como você se sente agora?</h1>
+      <p class="subtitle">Registrar sua sensação ajuda a calibrar o ritmo dos próximos dias.</p>
     </div>
 
     <!-- Grelha de 6 Sentimentos -->
-    <form class="actions-grid">
+    <div class="cards-grid">
       
       <!-- 1. Alívio & Leveza (Selecionado por padrão) -->
-      <label class="action-item">
+      <label class="card-item">
         <input type="radio" name="sentimento" value="alivio" class="action-input" checked>
-        <div class="action-card">
-          <span class="radio-dot"></span>
-          <div class="icon-circle">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-              <line x1="9" y1="9" x2="9.01" y2="9"></line>
-              <line x1="15" y1="9" x2="15.01" y2="9"></line>
-            </svg>
+        <div class="card-option">
+          <div class="icon-card">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M7.99969 14.001C7.99969 14.001 9.49981 16.0011 12 16.0011C14.5002 16.0011 16.0003 14.001 16.0003 14.001M8.99977 9.00056H9.00977M15.0002 9.00056H15.0102M22.0008 12.0008C22.0008 17.5241 17.5233 22.0016 12 22.0016C6.47672 22.0016 1.99921 17.5241 1.99921 12.0008C1.99921 6.47751 6.47672 2 12 2C17.5233 2 22.0008 6.47751 22.0008 12.0008Z" stroke-width="1.8" stroke-linecap="round" stroke="currentColor"/>
+</svg>
           </div>
           <h3>Alívio &amp; Leveza</h3>
         </div>
       </label>
 
       <!-- 2. Mais disposição -->
-      <label class="action-item">
+      <label class="card-item">
         <input type="radio" name="sentimento" value="disposicao" class="action-input">
-        <div class="action-card">
-          <span class="radio-dot"></span>
-          <div class="icon-circle">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M7 6H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path>
-              <path d="M17 6h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2"></path>
-              <path d="m13 8-3 4h4l-2 4"></path>
-            </svg>
+        <div class="card-option">
+          <div class="icon-card">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M10.9999 7L7.99968 12H12L8.99976 17M14.8562 6H16.0003C16.5307 6 17.0395 6.21071 17.4146 6.58579C17.7897 6.96086 18.0004 7.46957 18.0004 8V16C18.0004 16.5304 17.7897 17.0391 17.4146 17.4142C17.0395 17.7893 16.5307 18 16.0003 18H13.065M22.0008 14V10M5.13945 18H3.99936C3.46888 18 2.96013 17.7893 2.58503 17.4142C2.20993 17.0391 1.9992 16.5304 1.9992 16V8C1.9992 7.46957 2.20993 6.96086 2.58503 6.58579C2.96013 6.21071 3.46888 6 3.99936 6H6.93559" stroke-width="1.8" stroke-linecap="round" stroke="currentColor"/>
+</svg>
           </div>
           <h3>Mais disposição</h3>
         </div>
       </label>
 
       <!-- 3. Neutro / Sem mudança -->
-      <label class="action-item">
+      <label class="card-item">
         <input type="radio" name="sentimento" value="neutro" class="action-input">
-        <div class="action-card">
-          <span class="radio-dot"></span>
-          <div class="icon-circle">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="8" y1="14" x2="16" y2="14"></line>
-              <line x1="9" y1="9" x2="9.01" y2="9"></line>
-              <line x1="15" y1="9" x2="15.01" y2="9"></line>
-            </svg>
+        <div class="card-option">
+          <div class="icon-card">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M7.99969 15.001H16.0003M8.99977 9.00056H9.00977M15.0002 9.00056H15.0102M22.0008 12.0008C22.0008 17.5241 17.5233 22.0016 12 22.0016C6.47672 22.0016 1.99921 17.5241 1.99921 12.0008C1.99921 6.47751 6.47672 2 12 2C17.5233 2 22.0008 6.47751 22.0008 12.0008Z" stroke-width="1.8" stroke-linecap="round" stroke="currentColor"/>
+</svg>
           </div>
           <h3>Neutro / Sem mudança</h3>
         </div>
       </label>
 
       <!-- 4. Ainda cansado(a) -->
-      <label class="action-item">
+      <label class="card-item">
         <input type="radio" name="sentimento" value="cansado" class="action-input">
-        <div class="action-card">
-          <span class="radio-dot"></span>
-          <div class="icon-circle">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26" viewBox="0 0 28 26" fill="none">
-  <path d="M16.8936 1.57989C14.5168 0.744798 11.9374 0.677724 9.52038 1.38816C7.10336 2.0986 4.97116 3.55057 3.42554 5.53858C1.87991 7.5266 0.99914 9.94996 0.907879 12.4657C0.816617 14.9815 1.51949 17.4622 2.91701 19.5568C4.31454 21.6514 6.33594 23.2538 8.69514 24.1372C11.0543 25.0206 13.6318 25.1403 16.0629 24.4794C18.4939 23.8184 20.6553 22.4103 22.2413 20.4542C23.8272 18.4981 24.7573 16.0933 24.9 13.5799M4.88394 12.2466C6.21834 14.0243 7.55275 14.0243 8.88715 12.2466M12.8904 12.2466C14.2248 14.0243 15.5592 14.0243 16.8936 12.2466M8.88715 18.9132H14.2248M19.5624 1.57989H24.9L19.5624 6.91323H24.9" stroke-width="2.4" stroke-linecap="round"/>
+        <div class="card-option">
+          <div class="icon-card">
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="26" viewBox="0 0 28 26" fill="none">
+  <path d="M16.8936 1.57989C14.5168 0.744798 11.9374 0.677724 9.52038 1.38816C7.10336 2.0986 4.97116 3.55057 3.42554 5.53858C1.87991 7.5266 0.99914 9.94996 0.907879 12.4657C0.816617 14.9815 1.51949 17.4622 2.91701 19.5568C4.31454 21.6514 6.33594 23.2538 8.69514 24.1372C11.0543 25.0206 13.6318 25.1403 16.0629 24.4794C18.4939 23.8184 20.6553 22.4103 22.2413 20.4542C23.8272 18.4981 24.7573 16.0933 24.9 13.5799M4.88394 12.2466C6.21834 14.0243 7.55275 14.0243 8.88715 12.2466M12.8904 12.2466C14.2248 14.0243 15.5592 14.0243 16.8936 12.2466M8.88715 18.9132H14.2248M19.5624 1.57989H24.9L19.5624 6.91323H24.9" stroke-width="1.8" stroke-linecap="round" stroke="currentColor"/>
 </svg>
           </div>
           <h3>Ainda cansado(a)</h3>
@@ -96,46 +80,35 @@
       </label>
 
       <!-- 5. Foco renovado -->
-      <label class="action-item">
+      <label class="card-item">
         <input type="radio" name="sentimento" value="foco" class="action-input">
-        <div class="action-card">
-          <span class="radio-dot"></span>
-          <div class="icon-circle">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="5" r="2.5"></circle>
-              <line x1="12" y1="7.5" x2="12" y2="21"></line>
-              <line x1="8" y1="11" x2="16" y2="11"></line>
-              <path d="M5 14a7 7 0 0 0 14 0"></path>
-            </svg>
+        <div class="card-option">
+          <div class="icon-card">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crosshair preview-icon"><circle cx="12" cy="12" r="10"/><line x1="22" x2="18" y1="12" y2="12"/><line x1="6" x2="2" y1="12" y2="12"/><line x1="12" x2="12" y1="6" y2="2"/><line x1="12" x2="12" y1="22" y2="18"/></svg>
           </div>
           <h3>Foco renovado</h3>
         </div>
       </label>
 
       <!-- 6. Acolhido(a) -->
-      <label class="action-item">
+      <label class="card-item">
         <input type="radio" name="sentimento" value="acolhido" class="action-input">
-        <div class="action-card">
-          <span class="radio-dot"></span>
-          <div class="icon-circle">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-            </svg>
+        <div class="card-option">
+          <div class="icon-card">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart preview-icon"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
           </div>
           <h3>Acolhido(a)</h3>
         </div>
       </label>
 
-    </form>
+    </div>
   </main>
 
   <!-- Rodapé -->
-  <footer class="footer-bar">
-    <button type="submit" class="btn-confirm btn-finalizar" onclick="window.location.href='final_checkin.html'">
+  <footer class="footer">
+    <button type="submit" class="btn-hero btn-form-card" onclick="window.location.href='final_checkin.html'">
       Finalizar check-in
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="20 6 9 17 4 12"></polyline>
-      </svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check preview-icon"><path d="M20 6 9 17l-5-5"/></svg>
     </button>
   </footer>
 
