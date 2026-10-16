@@ -1,4 +1,6 @@
-@import "../base/style.css"; /*estilo das letras do css do rodrigo*/
+@import "../base/variables.css";
+@import "../base/tipography.css";
+@import "../base/reset.css"; /*estilo das letras do css do rodrigo*/
 
 * {
     margin: 0;
